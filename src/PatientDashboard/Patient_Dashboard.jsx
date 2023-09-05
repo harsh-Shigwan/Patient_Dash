@@ -3,7 +3,7 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
 import { IoIosMore } from "react-icons/io";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
-import HorizontalImageCardList from "../components/PatientComponents/HorizontalImageCardList";
+import  HorizontalImageCardList from "../components/PatientComponents/HorizontalImageCardList";
 
 import {
   Stacked,
@@ -120,7 +120,7 @@ const Patient_Dashboard = () => {
       <section className="text-gray-600 body-font  bg-white dark:bg-secondary-dark-bg  w-full h-full mt-5 mb-5 ">
         <div className="mt-10 md:h-full w-full bg-white dark:bg-secondary-dark-bg relative ">
           <div className="h-28 bg-white dark:bg-secondary-dark-bg flex justify-between items-center  ">
-            <div className=" mt-10 w-screen space-x-4 bg-white md:bg-white flex relative ml-10 mr-80  h-10 md:w-full md:space-x-4 ">
+            <div className=" mt-10 w-screen space-x-4 bg-white dark:bg-secondary-dark-bg md:bg-white flex relative ml-10 mr-80  h-10 md:w-full md:space-x-4 ">
               <div className=" h-12  w-56  md:h-10  md:w-3/4 bg-white dark:bg-secondary-dark-bg ">
                 <DropDown currentMode={currentMode} />
               </div>
@@ -169,7 +169,7 @@ const Patient_Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="ml-5 space-y-0.5 bg-transparent  md:h-72 w-60 rounded-2xl bg-white dark:bg-secondary-dark-bg md:w-full">
+            <div className="ml-5 space-y-0.5 bg-transparent  md:h-72 md:w-60 rounded-2xl bg-white dark:bg-secondary-dark-bg w-full">
               <div className='h-52 w-60 rounded-t-2xl border-2 bg-white bg-[url("https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_medicines.png")] bg-cover'></div>
               <div className=" h-24 w-60 rounded-b-2xl border-2 bg-white">
                 <div className="h-15    text-center ml-5 mr-5 tracking-tight text-xl font-semibold">
@@ -180,7 +180,7 @@ const Patient_Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="ml-5 space-y-0.5 bg-transparent  md:h-72 w-60 rounded-2xl bg-white dark:bg-secondary-dark-bg md:w-full">
+            <div className="ml-5 space-y-0.5 bg-transparent  md:h-72 md:w-60 rounded-2xl bg-white dark:bg-secondary-dark-bg w-full">
               <div className='h-52 w-60 rounded-t-2xl border-2 bg-white bg-[url("https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_lab_tests.png")] bg-cover'></div>
               <div className=" h-24 w-60 rounded-b-2xl border-2 bg-white">
                 <div className="h-15    text-center ml-5 mr-5 tracking-tight text-xl font-semibold">
@@ -191,7 +191,7 @@ const Patient_Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="ml-5 space-y-0.5 bg-transparent  md:h-72 w-60 rounded-2xl bg-white dark:bg-secondary-dark-bg w-full">
+            <div className="ml-5 space-y-0.5 bg-transparent  md:h-72 md:w-60 rounded-2xl bg-white dark:bg-secondary-dark-bg w-full">
               <div className='h-52 w-60 rounded-t-2xl border-2 bg-white bg-[url("https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_surgeries.png")] bg-cover'></div>
               <div className="h-24 w-60 rounded-b-xl border-2 bg-white">
                 <div className="h-15 text-center ml-5 mr-5 tracking-tight text-xl font-semibold ">
@@ -226,7 +226,7 @@ const Patient_Dashboard = () => {
         <div className=" flex-wrap flex h-full w-full ml-16 space-y-8   md:flex space-x-6 md:ml-2 mr-2 md:h-96 md:w-full bg-white dark:bg-secondary-dark-bg ">
           <div className=" ml-6 sm:h-72 w-52 rounded-2xl  bg-white dark:bg-secondary-dark-bg ">
             <div className='h-52 rounded-full bg-white bg-[url("https://www.practostatic.com/consult/consult-home/symptoms_icon/irregular-painful+period.png")] bg-cover'></div>
-            <div className="h-15    text-center ml-5 mr-5 mt-4 tracking-tight text-md font-semibold dark:text-white">
+            <div className="h-15 text-center ml-5 mr-5 mt-4 tracking-tight text-md font-semibold dark:text-white">
               Periods Doubt and Pregency
             </div>
             <div className="h-13 text-sm text-sky-400   text-center mt-2 ">

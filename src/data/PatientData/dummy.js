@@ -472,7 +472,87 @@ export const employeesGrid = [
     width: '125',
     textAlign: 'Center' },
 ];
-
+export const CardData = [
+  {
+    Name:"dr praksh ambre",
+    
+    Edu:"dncen uensujndn nnsuwn unnwn",
+    Exp:"c years",
+    City:"Mumbai"
+  },
+    {
+   Name:"dr harsh shigwan",
+   Edu:"xdmxm imdimmpoiam psmmrwoi",
+   Exp:"9 years",
+   City:"vunvn"
+ },
+    {
+   Name:"dr pra ckshcisms ",
+   Edu:"MBBScccixokm",
+   Exp:"90 ",
+   City:"mum"
+ },
+    {
+   Name:"dr praksh",
+   Edu:"MBBS",
+   Exp:"5 years",
+   City:"Mumbai"
+ },
+    {
+   Name:"dr praksh",
+   Edu:"MBBS",
+   Exp:"5 years",
+   City:"mum"
+   }, 
+ {
+  Name:"dr praksh",
+  Edu:"MBBS",
+  Exp:"5 years",
+  City:"mum"
+},
+  {
+ Name2:"dr sunilsh",
+ Edu2:"Mvmeomdvosi s re dsvk r",
+ Exp2:"9 years",
+ Loc2:"san"
+ }, 
+  {
+ Name2:"dr prdsada dfh",
+ Edu2:"MBBSzdcvfd fdxb",
+ Exp2:"sz years",
+ Loc2:"mum"
+ }, 
+  {
+ Name2:"dr pzdvdser raksh",
+ Edu2:"MBBcz fgte erfvS",
+ Exp2:"5 years",
+ Loc2:"bang"
+ }, 
+  {
+ Name2:"dr prcxv dfaksh",
+ Edu2:"MBzBcxsbd S",
+ Exp2:"5 years",
+ Loc2:"mum"
+ }, 
+  {
+ Name2:"dr praksh",
+ Edu2:"MBBS",
+ Exp2:"5 years",
+ Loc2:"mum"
+ }, 
+  {
+ Name:"dr praksh",
+ Edu:"MBBS",
+ Exp:"5 years",
+ City:"mum"
+ }, 
+  {
+ Name:"dr praksh",
+ Edu:"MBBS",
+ Exp:"5 years",
+ City:"mum"
+ }, 
+]
 export const links = [
   {
     title: 'Dashboard',
@@ -3073,6 +3153,35 @@ export const lineChartData = [
 export const dropdownData = [
   {
     Id: '0',
+    City: 'All',
+  },
+  {
+    Id: '1',
+    City: 'Mumbai',
+  },
+  {
+    Id: '2',
+    City: 'Pune',
+  }, {
+    Id: '3',
+    City: 'Delhi',
+  },
+  {
+    Id:'4',
+    City:'Kolkatta',
+  },
+   {
+    Id:'5',
+    City:'Chennai'
+   },
+   {
+    Id:'6',
+    City:'Benglore'
+   }  ,
+];
+export const dropdown3Data = [
+  {
+    Id: '0',
     City: 'City',
   },
   {
@@ -3099,6 +3208,38 @@ export const dropdownData = [
     City:'Benglore'
    }  ,
 ];
+
+export const dropdown4Data =[
+  {
+    Id :'1',
+    Dr:'Dentist'
+  },
+  {
+    Id :'2',
+    Dr:'Gynecologist/Obstetrician'
+  },
+  {
+    Id :'3',
+    Dr:'General Physician'
+  },
+  {
+    Id :'4',
+    Dr:'Dermatologist'
+  },
+  {
+    Id :'5',
+    Dr:'Ear-nose-throat (ent) specialist'
+  },
+  {
+    Id :'6',
+    Dr:'Homoeopath'
+  },
+  {
+    Id :'7',
+    Dr:'Ayurveda'
+  },  
+]
+
 
 export const dropdown1Data =[
   {
