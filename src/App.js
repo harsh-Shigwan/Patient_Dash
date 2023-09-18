@@ -4,9 +4,10 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components/PatientComponents';
-import {   Calendar, Doctor, Customers, Kanban, Editor , Appointment , Records ,Prescription , Patient_Dashboard , QnA ,Remainder } from './PatientDashboard';
+import { TimesSlot, Calendar, Doctor, Customers, Kanban, Editor , Appointment , Records ,Prescription , Patient_Dashboard , QnA ,Remainder, About } from './PatientDashboard';
 import './App.css';
-
+import './PatientDashboard/Calender.css'
+//import Profile from './components/PatientComponents/Pro';
 import { useStateContext } from './contexts/PatientContext/ContextProvider';
 //import {Appiontment }from './pages/Appiontment';
 
@@ -21,6 +22,7 @@ const App = () => {
       setCurrentMode(currentThemeMode);
     }
   }, []);
+  
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
@@ -71,13 +73,15 @@ const App = () => {
                 
 
                 {/* pages  */}
-                
+               
                 <Route path="/Doctor" element={<Doctor />} />
                 <Route path="/customers" element={<Customers />} />
                 <Route path="/Appointment" element={<Appointment/>}/>
                 <Route path="/Records" element={<Records/>}/>
                 <Route path = "Prescription" element={<Prescription/>}/>
-                <Route path="/Remainder" element={<Remainder/>}/>
+                <Route path="/Remainder" element={<Remainder/>} />
+               <Route path='/about' element={<About/>}/>
+               <Route path='/TimesSlot' element={<TimesSlot/>}/>
                
                 
 
@@ -95,6 +99,7 @@ const App = () => {
           </div>
         </div>
       </BrowserRouter>
+      
     </div>
   );
 };

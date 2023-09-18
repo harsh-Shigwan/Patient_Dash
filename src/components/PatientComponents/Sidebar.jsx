@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-
+import { liks } from '../../data/PatientData/dummy';
 import { links } from '../../data/PatientData/dummy';
 import { useStateContext } from '../../contexts/PatientContext/ContextProvider';
 
@@ -61,6 +61,29 @@ const Sidebar = () => {
               </div>
             ))}
           </div>
+          <div className="mt-10 ">
+          {liks.map((item) => (
+            <div key={item.title}>
+              <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
+                {item.title}
+              </p>
+              {item.liks.map((link) => (
+                <NavLink
+                  to={`/${link.name}`}
+                  key={link.name}
+                  onClick={handleCloseSideBar}
+                  style={({ isActive }) => ({
+                    backgroundColor: isActive ? currentColor : '',
+                  })}
+                 className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                >
+                  {item.icon}
+                  <span className="capitalize ">{item.name}</span>
+                </NavLink>
+              ))}
+            </div>
+          ))}
+        </div>
         </>
       )}
     </div>

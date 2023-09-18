@@ -10,7 +10,7 @@ import {
   Pie,
   Button,
   LineChart,
-  SparkLine,
+  SparkLine
 } from "../components/PatientComponents";
 import {
   earningData,
@@ -36,6 +36,7 @@ const DropDown = ({ currentMode }) => (
       dataSource={dropdownData}
       popupHeight="220px"
       popupWidth="25vw"
+     
     />
   </div>
 );
@@ -114,7 +115,7 @@ const Patient_Dashboard = () => {
     },
     // Add more card data as needed
   ];
-
+  
   return (
     <div className=" bg-white dark:bg-secondary-dark-bg h-full w-full ">
       <section className="text-gray-600 body-font  bg-white dark:bg-secondary-dark-bg  w-full h-full mt-5 mb-5 ">

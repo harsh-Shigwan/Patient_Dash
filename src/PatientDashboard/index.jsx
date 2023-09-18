@@ -1,3 +1,5 @@
+import { fromJSON } from 'postcss';
+
 export { default as Ecommerce } from '../PatientDashboard/Ecommerce';
 //export { default as Appointment } from './Appointment';
 export { default as Kanban } from '../PatientDashboard/Kanban';
@@ -26,4 +28,6 @@ export { default as Billing}from '../PatientDashboard/Billing';
 export { default as QnA } from '../PatientDashboard/QnA';
 export { default as Remainder} from '../PatientDashboard/Remainder';
 export { default as Patient_Dashboard} from '../PatientDashboard/Patient_Dashboard';
-
+export { default as About} from '../PatientDashboard/About';
+//export { default as My } from '../PatientDashboard/My'; 
+export { default as TimesSlot} from '../PatientDashboard/TimesSlot'
