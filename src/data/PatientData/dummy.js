@@ -536,7 +536,7 @@ export const CardData = [
 ]
 export const liks = [
   {
-    title:'nh',
+    title:'',
     liks:[
       {
         name:'About',
@@ -548,6 +548,18 @@ export const liks = [
       },
       {
         name: 'TimesSlot',
+        icon: <RiStethoscopeLine />,
+      },
+      {
+        name: 'QandA',
+        icon: <RiStethoscopeLine />,
+      },
+      {
+        name: 'Remind',
+        icon: <RiStethoscopeLine />,
+      },
+      {
+        name: 'RecordsPage2',
         icon: <RiStethoscopeLine />,
       },
     ]
@@ -591,14 +603,14 @@ export const links = [
         icon:<MdOutlineMedicalServices/>
       },
       {
-        name:'Doctor_Review',
+        name:'Review',
         icon:<AiOutlineStar/>
       },
       {
         name:'Consultation',
         icon:<SiGooglemeet/>
       },{
-        name:'Medication_Remainder',
+        name:'Reminder',
         icon:<BsBell/>
       }
       

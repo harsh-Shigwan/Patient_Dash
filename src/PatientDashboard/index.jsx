@@ -26,8 +26,11 @@ export { default as Emergency} from '../PatientDashboard/Emergency';
 export { default as Consultation} from '../PatientDashboard/Consultation';
 export { default as Billing}from '../PatientDashboard/Billing';
 export { default as QnA } from '../PatientDashboard/QnA';
-export { default as Remainder} from '../PatientDashboard/Remainder';
+export { default as Reminder} from './Reminder';
 export { default as Patient_Dashboard} from '../PatientDashboard/Patient_Dashboard';
 export { default as About} from '../PatientDashboard/About';
 //export { default as My } from '../PatientDashboard/My'; 
-export { default as TimesSlot} from '../PatientDashboard/TimesSlot'
+export { default as TimesSlot} from '../PatientDashboard/TimesSlot';
+export { default as QandA } from '../PatientDashboard/QandA';
+export { default as Remind} from '../PatientDashboard/Remind';
+export { default as RecordsPage2} from '../PatientDashboard/RecordsPage2'

@@ -69,16 +69,16 @@ const Sidebar = () => {
               </p>
               {item.liks.map((link) => (
                 <NavLink
-                  to={`/${link.name}`}
-                  key={link.name}
-                  onClick={handleCloseSideBar}
+                  //to={`/${link.name}`}
+                  ////key={link.name}
+                  //onClick={handleCloseSideBar}
                   style={({ isActive }) => ({
                     backgroundColor: isActive ? currentColor : '',
                   })}
-                 className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                 //className={({ isActive }) => (isActive ? activeLink : normalLink)}
                 >
-                  {item.icon}
-                  <span className="capitalize ">{item.name}</span>
+                 
+                  <span className="capitalize "></span>
                 </NavLink>
               ))}
             </div>

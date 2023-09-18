@@ -1,44 +1,83 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-const DateSlider = ({ slots }) => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+const Prescription = () => {
+  const [prescriptions, setPrescriptions] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedPrescription, setSelectedPrescription] = useState('');
+  const [patientName, setPatientName] = useState('');
 
-  useEffect(() => {
-    // Set the selected date to today's date.
-    setSelectedDate(new Date());
-  }, []);
-
-  const renderSlots = () => {
-    const today = new Date();
-    const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
-    const yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
-
-    return (
-      <div>
-        {slots.map((slot) => (
-          <div
-            key={slot.id}
-            className={
-              slot.date === selectedDate ? "selected" : slot.date >= today && slot.date <= tomorrow ? "available" : ""
-            }
-            onClick={() => setSelectedDate(slot.date)}
-          >
-            {slot.date.toLocaleDateString()}
-          </div>
-        ))}
-        <div className="today">Today</div>
-        <div className="tomorrow">Tomorrow</div>
-        <div className="yesterday">Yesterday</div>
-      </div>
-    );
+  // Function to add a prescription to the list
+  const addPrescription = () => {
+    if (selectedPrescription && patientName) {
+      setPrescriptions([...prescriptions, { patientName, prescription: selectedPrescription }]);
+      setSelectedPrescription('');
+      setPatientName('');
+    }
   };
 
-  return (
-    <div>
-      <input type="date" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)} />
-      {renderSlots()}
-    </div>
+  // Function to filter prescriptions as you type
+  const filteredPrescriptions = prescriptions.filter((prescription) =>
+    prescription.prescription.toLowerCase().includes(searchQuery.toLowerCase())
   );
-};
 
-export default DateSlider;
+  // Use useEffect to clear the search query when a prescription is selected
+  useEffect(() => {
+    if (selectedPrescription) {
+      setSearchQuery('');
+    }
+  }, [selectedPrescription]);
+
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-semibold mb-4">Patient Prescription</h1>
+      <div className="mb-4">
+        <input
+          type="text"
+          placeholder="Search for a prescription..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+        />
+        <div className="mt-2">
+          {filteredPrescriptions.map((prescription, index) => (
+            <div
+              key={index}
+              onClick={() => setSelectedPrescription(prescription.prescription)}
+              className="cursor-pointer text-blue-500 hover:underline"
+            >
+              {prescription.prescription}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="mb-4">
+        <input
+          type="text"
+          placeholder="Patient Name"
+          value={patientName}
+          onChange={(e) => setPatientName(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+        />
+      </div>
+      <div className="mb-4">
+        <button
+          onClick={addPrescription}
+          className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md focus:outline-none"
+        >
+          Submit Prescription
+        </button>
+      </div>
+      <div>
+        <h2 className="text-xl font-semibold">Prescription List</h2>
+        <ul className="list-disc ml-6">
+          {prescriptions.map((prescription, index) => (
+            <li key={index}>
+              Patient: {prescription.patientName} - Prescription: {prescription.prescription}
+            </li>
+          ))}
+        </ul>
+      </div>
+      </div>
+    )
+  };
+export default Prescription;

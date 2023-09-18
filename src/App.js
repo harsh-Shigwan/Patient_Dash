@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components/PatientComponents';
-import { TimesSlot, Calendar, Doctor, Customers, Kanban, Editor , Appointment , Records ,Prescription , Patient_Dashboard , QnA ,Remainder, About } from './PatientDashboard';
+import { TimesSlot, Calendar, Doctor, Customers, Kanban, Editor , Appointment , Records ,Prescription , Patient_Dashboard , QnA ,QandA, About , Remind , Reminder, Review , RecordsPage2 } from './PatientDashboard';
 import './App.css';
 import './PatientDashboard/Calender.css'
 //import Profile from './components/PatientComponents/Pro';
@@ -79,19 +79,20 @@ const App = () => {
                 <Route path="/Appointment" element={<Appointment/>}/>
                 <Route path="/Records" element={<Records/>}/>
                 <Route path = "Prescription" element={<Prescription/>}/>
-                <Route path="/Remainder" element={<Remainder/>} />
+                <Route path="/Reminder" element={<Reminder/>} />
                <Route path='/about' element={<About/>}/>
                <Route path='/TimesSlot' element={<TimesSlot/>}/>
-               
-                
-
+               <Route path="/Remind" element={<Remind/>} />
+               <Route path="/Review" element={<Review/>} />
+              
                 {/* apps  */}
                 <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
                 <Route path="/calendar" element={<Calendar />} />
-                
+                <Route path="/QandA" element={<QandA/>}/>
                 <Route path="/QnA" element={<QnA/>}/>
-              
+                <Route path="/RecordsPage2" element={<RecordsPage2/>} />
+
 
               </Routes>
             </div>
