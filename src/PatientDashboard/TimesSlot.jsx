@@ -2,7 +2,7 @@ import { useState } from "react";
 import Calendar from "react-calendar";
 //import './App.css';
 import Time from "../components/PatientComponents/Time";
-
+import { CardData } from "../data/PatientData/dummy";
 function TimesSlot() {
   const [date, setDate] = useState(new Date());
   const [showTime, setShowTime] = useState(false);

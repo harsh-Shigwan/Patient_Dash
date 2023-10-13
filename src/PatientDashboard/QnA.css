@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --headings-typography-size-4: "DM Sans";
+  --text-2xl-font-semibold: Inter;
+
+  /* font sizes */
+  --headings-typography-size-4-size: 22px;
+  --paragraph-default-size: 18px;
+  --text-2xl-font-semibold-size: 24px;
+
+  /* Colors */
+  --neutral-100: #fff;
+  --neutral-800: #170f49;
+  --blue-700: #1a56db;
+  --neutral-600: #6f6c90;
+  --blue-900: #233876;
+  --teal-300: #7edce2;
+  --gray-400: #9ca3af;
+  --gray-900: #111928;
+
+  /* Gaps */
+  --gap-xs: 12px;
+  --gap-6xs: 7px;
+
+  /* Paddings */
+  --padding-5xs: 8px;
+
+  /* Border radiuses */
+  --br-base: 16px;
+  --br-5xs: 8px;
+
+  /* Effects */
+  --cards-short-default: 0px 5px 16px rgba(8, 15, 52, 0.06);
+}
+.rectangle-div,
+.testimonial {
+  position: absolute;
+  top: 2379px;
+  left: 360px;
+  width: 720px;
+  height: 410px;
+}
+.rectangle-div {
+  height: 43.54%;
+  width: 99.94%;
+  top: 0;
+  right: 0.06%;
+  bottom: 56.46%;
+  left: 0;
+  border-radius: var(--br-base);
+  background-color: var(--neutral-100);
+  box-shadow: var(--cards-short-default);
+}
+.ut-enim-ad,
+.what-is-the {
+  position: absolute;
+  height: 66.18%;
+  width: 85.61%;
+  top: 33.82%;
+  left: 0.02%;
+  line-height: 30px;
+  display: inline-block;
+}
+.what-is-the {
+  height: 20.59%;
+  width: 81.42%;
+  top: 3.21%;
+  left: 0;
+  font-size: var(--headings-typography-size-4-size);
+  line-height: 28px;
+  font-weight: 500;
+  color: var(--neutral-800);
+}
+.group-child1 {
+  position: absolute;
+  height: 30.52%;
+  width: 8.28%;
+  top: 0;
+  right: 0;
+  bottom: 69.48%;
+  left: 91.72%;
+  border-radius: var(--br-5xs);
+  background-color: var(--blue-700);
+}
+.group-icon {
+  position: absolute;
+  height: 1.96%;
+  width: 3.72%;
+  top: 14.28%;
+  right: 2.28%;
+  bottom: 83.76%;
+  left: 94%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.ut-enim-ad-minim-veniam-quis-n-parent {
+  position: absolute;
+  height: 25.93%;
+  width: 88.48%;
+  top: 7.63%;
+  right: 5.8%;
+  bottom: 66.45%;
+  left: 5.72%;
+  font-size: var(--paragraph-default-size);
+  color: var(--neutral-600);
+}
+.group-child2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-base);
+  background-color: var(--neutral-100);
+  box-shadow: var(--cards-short-default);
+}
+.what-is-the1 {
+  position: absolute;
+  height: 67.47%;
+  width: 80.44%;
+  top: 10.57%;
+  left: 0;
+  line-height: 28px;
+  font-weight: 500;
+  display: inline-block;
+}
+.group-child3 {
+  position: absolute;
+  height: 100%;
+  width: 8.28%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 91.72%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.what-is-the-consultation-fees-parent {
+  position: absolute;
+  height: 34.02%;
+  width: 88.52%;
+  top: 32.79%;
+  right: 5.74%;
+  bottom: 33.2%;
+  left: 5.74%;
+}
+.rectangle-container,
+.rectangle-group {
+  position: absolute;
+  height: 23.26%;
+  width: 99.94%;
+  top: 48.5%;
+  right: 0.06%;
+  bottom: 28.24%;
+  left: 0;
+}
+.rectangle-container {
+  top: 76.74%;
+  right: 0;
+  bottom: 0;
+  left: 0.06%;
+}
+.rectangle-parent {
+  position: absolute;
+  height: 63.41%;
+  width: 35.83%;
+  top: 20.67%;
+  right: 19.37%;
+  bottom: 15.92%;
+  left: 44.79%;
+  color: var(--neutral-800);
+  font-family: var(--headings-typography-size-4);
+}

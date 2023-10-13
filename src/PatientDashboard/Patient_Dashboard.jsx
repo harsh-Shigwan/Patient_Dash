@@ -1,16 +1,17 @@
 import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
-//import { GoPrimitiveDot } from "react-icons/go";
+
 import { IoIosMore } from "react-icons/io";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
-import  HorizontalImageCardList from "../components/PatientComponents/HorizontalImageCardList";
+import HorizontalImageCardList from "../components/PatientComponents/HorizontalImageCardList";
 
+import { home1 } from "../data/PatientData/dummy";
 import {
   Stacked,
   Pie,
   Button,
   LineChart,
-  SparkLine
+  SparkLine,
 } from "../components/PatientComponents";
 import {
   earningData,
@@ -27,7 +28,7 @@ import { useStateContext } from "../contexts/PatientContext/ContextProvider";
 import product9 from "../data/PatientData/product9.jpg";
 
 const DropDown = ({ currentMode }) => (
-  <div className=" border-4 border-color px-2 py-1 rounded-md w-full">
+  <div className=" border-4 border-color px-2 py-1 rounded-md w-64">
     <DropDownListComponent
       id="City"
       fields={{ text: "City", value: "Id" }}
@@ -36,13 +37,12 @@ const DropDown = ({ currentMode }) => (
       dataSource={dropdownData}
       popupHeight="220px"
       popupWidth="25vw"
-     
     />
   </div>
 );
 
 const DropDown1 = ({ currentMode }) => (
-  <div className=" border-4 border-color px-2 py-1 rounded-md w-full">
+  <div className=" border-4 border-color px-2 py-1 rounded-md w-5/6">
     <DropDownListComponent
       id="City"
       fields={{ text: "Dr", value: "Id" }}
@@ -115,8 +115,995 @@ const Patient_Dashboard = () => {
     },
     // Add more card data as needed
   ];
-  
+
   return (
+    <div>
+      <section className="  h-full bg-teal-50 sticky ">
+        <div
+          className=" mt-5 mx-10 rounded-xl bg-teal-200 h-[229px]  text-left text-5xl text-black font-text-sm-font-semibold"
+          id="search"
+        >
+          <div className="  flex flex-col items-start justify-start gap-[1px]">
+            <div className=" mt-5 ml-10 leading-[150%] font-semibold inline-block w-[170px] h-[37px] shrink-0">
+              Search Doctor
+            </div>
+            <div className=" ml-10 mt-2 text-sm leading-[150%] inline-block w-[374px] h-[37px] shrink-0">
+              Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </div>
+          <div className=" flex space-x-5 mt-8">
+            <div className="   w-96 ml-10 font-text-sm-font-semibold text-lg bg-white  rounded-sm box-border h-[50px]  border-[1px] border-solid border-teal-400 ">
+              <DropDown currentMode={currentMode} />
+            </div>{" "}
+            <div className="   w-2/4    font-text-sm-font-semibold text-lg bg-white   rounded-sm box-border  h-[50px]  border-[1px] border-solid border-teal-400    ">
+              <DropDown1 currentMode={currentMode} />
+            </div>
+          </div>
+          <img
+            className=" top-[0px] left-[1069px] w-10 h-10 object-cover opacity-[0.85]"
+            alt=""
+            src="/medical-history-2@2x.png"
+          />
+        </div>
+      </section>
+      <section className=" flex">
+        {/*overflow-scroll flex no-scrollbar*/}
+        {home1.map((x, index) => {
+          return (
+            <div
+              className=" rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)]  flex flex-row items-center mt-10 mx-10 w-2/5 border-[1px] border-solid border-green-50 flex-shrink-0 n"
+              id="card"
+            >
+              <div className="flex flex-row items-center justify-start gap-[13px]">
+                <img
+                  className="relative w-[230px] h-[228px] object-cover"
+                  alt=""
+                  src="/image-3@2x.png"
+                />
+                <div className="flex flex-col items-start justify-start gap-[34px]">
+                  <div className="relative leading-[150%] font-medium inline-block w-[217px]">
+                    {x.header}
+                  </div>
+                  <div className="relative text-base leading-[150%] font-light inline-block w-[217px] h-[57px] shrink-0">
+                    {x.dec}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </section>
+      <section
+          className=" mx-10 flex flex-col mt-36 items-start justify-start gap-[70px] text-left      text-17xl text-teal-500 font-text-sm-font-semibold "
+            id="page2"
+          >
+          <div className="flex flex-col items-start justify-start" id="name">
+          <b className="relative leading-[150%]">
+            Consult top doctors online for any health concern
+          </b>
+          <div className="relative text-5xl leading-[150%] text-teal-800 inline-block w-[728px] h-[68px] shrink-0">
+            Private online consultations with verified doctors in all
+            specialists
+          </div>
+        </div>
+
+        <div
+          className="flex gap-5 items-start justify-around  text-left text-base text-black font-text-sm-font-semibold   w-full"
+          id="horicard"
+         >
+          <div className="  relative w-[235.79px] h-[331.97px] " id="Hcard1">
+            <div className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
+              <button
+                className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[257px] left-[56px] w-[123px] h-[39px]"
+                autoFocus={true}
+                id="hcard"
+              >
+                <div className="absolute top-[0px] left-[0px] rounded-[36px] bg-teal-400 box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-500" />
+                <div className="absolute top-[8px] left-[11px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-white text-left inline-block w-[101px]">
+                  Consult Now
+                </div>
+              </button>
+              <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+                Periods or Pregnancy
+              </div>
+            </div>
+            <img
+              className="absolute top-[8.3px] left-[0px] w-[235.79px] h-[206.44px] object-cover"
+              alt=""
+              src="/image-5@2x.png"
+            />
+          </div>
+
+          
+          
+          <div
+            className="relative rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden shrink-0 border-[1px] border-solid border-green-50"
+            id="Hcard2"
+          >
+            <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+              Acne or Skin Problem
+            </div>
+            <img
+              className="absolute top-[8px] left-[19px] w-[203px] h-[182px] object-cover"
+              alt=""
+              src="/image-6@2x.png"
+            />
+            <button
+              className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[255px] left-[56px] w-[123px] h-[39px]"
+              autoFocus={true}
+              id="hcard2"
+            >
+              <div className="absolute top-[0px] left-[0px] rounded-2xs bg-teal-400 box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-500" />
+              <div className="absolute top-[8px] left-[11px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-white text-left inline-block w-[101px]">
+                Consult Now
+              </div>
+            </button>
+          </div>
+          <div
+          className="relative rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden shrink-0 border-[1px] border-solid border-green-50"
+          id="Hcard2"
+         >
+          <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+            Acne or Skin Problem
+          </div>
+          <img
+            className="absolute top-[8px] left-[19px] w-[203px] h-[182px] object-cover"
+            alt=""
+            src="/image-6@2x.png"
+          />
+          <button
+            className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[255px] left-[56px] w-[123px] h-[39px]"
+            autoFocus={true}
+            id="hcard2"
+          >
+            <div className="absolute top-[0px] left-[0px] rounded-2xs bg-teal-400 box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-500" />
+            <div className="absolute top-[8px] left-[11px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-white text-left inline-block w-[101px]">
+              Consult Now
+            </div>
+          </button>
+         </div>
+          <div className="relative w-[235.79px] h-[331.97px]">
+            <div
+              className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50"
+              id="Hcard3"
+            >
+              <div className="absolute top-[259px] left-[60px] rounded-mini bg-white box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-300" />
+              <button
+                className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[267px] left-[71px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-teal-800 text-left inline-block w-[101px]"
+                autoFocus={true}
+                id="hcard3"
+              >
+                Consult Now
+              </button>
+              <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+                Baby not feeling well
+              </div>
+            </div>
+            <img
+              className="absolute top-[3px] left-[12.41px] w-[211px] h-[218px] object-cover"
+              alt=""
+              src="/image-7@2x.png"
+            />
+          </div>
+        </div>
+      </section>
+
+      <main
+        className=" mx-10 mt-36 flex flex-col items-start justify-start gap-[75px]"
+        id="page4"
+      >
+        <section
+          className="w-[947px] flex flex-col items-start justify-start text-left text-17xl text-teal-500 font-text-sm-font-semibold"
+          id="bookappoint"
+        >
+          <div className="self-stretch relative h-[117px]">
+            <b className="  inline-block w-[947px]">
+              Book an appointment with a doctor
+            </b>
+            <div className="  text-5xl text-teal-800 inline-block w-[947px]">
+              Book appointments and received experienced doctor insight from
+              various medical fields.
+            </div>
+          </div>
+        </section>
+        <section
+          className="flex flex-row items-center justify-start gap-[31px] text-left text-base text-teal-800 font-text-sm-font-semibold"
+          id="dccard"
+        >
+          <div
+            className="relative w-[406px] h-[234px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)]  "
+            id="Dcard1"
+          >
+            <div className=" top-[0px] left-[0px] rounded-9xl w-[406px] h-[234px] overflow-hidden  bg-cover bg-no-repeat bg-[top]">
+              <div className="absolute top-[180px] left-[255px] w-[136px] h-[39px] text-white">
+                <div className="absolute top-[0px] left-[0px] w-[136px] flex flex-col items-start justify-start">
+                  <div className="relative rounded-2xs bg-teal-400   box-border w-[136px] h-[39px] border-[1px] border-solid border-teal-500" />
+                </div>
+                <div className="absolute top-[8px] left-[20px] flex flex-row items-start justify-start">
+                  <div className="relative leading-[150%] font-semibold inline-block w-[82px] shrink-0">
+                    Book Now
+                  </div>
+                  <img
+                    className="relative w-6 h-6 overflow-hidden shrink-0"
+                    alt=""
+                    src="/arrowright2.svg"
+                  />
+                </div>
+              </div>
+              <div className="absolute top-[10px] left-[261px] rounded-3xs bg-pink-100 w-[135px] h-[37px] flex flex-row items-center justify-center py-0.5 px-3 box-border text-center text-lg text-pink-900">
+                <div className="relative leading-[150%] font-medium">
+                  Dentist
+                </div>
+              </div>
+            </div>
+            <img
+              className="absolute top-[6px] left-[5px] w-[232px] h-[222.23px] object-cover"
+              alt=""
+              src="/image-9@2x.png"
+            />
+          </div>
+        </section>
+      </main>
+      <div>
+      <div className="mt-72">
+      <img
+      className="  w-[232px] h-[222.23px] object-cover"
+      alt=""
+      src="https://s3-alpha-sig.figma.com/img/6147/2dda/ef2eae79fb261e9505e86dafa65bbc85?Expires=1698019200&Signature=M3R8~FItsH3PFZJMUq6UGopI57BvPJkP6f9CqKthOlUOg4d31vb4O51umJ72DjV2zpA0-GU7jDdxoMpoZe69eFZJpn2eQzwKJ6nNql1fXeiJy-2mqOMmsML7nsThGRhUpvoQ95a5ossRKxeiN93uCyCVi~9Foy~D7M~dk5F4JtuIcIgxrvOzRw~glkLqLDq4qZ73ng7-5aWjbHbqbxJQSPT20OeT8hY7gFCcYjfiUarp5Uwq2D~aRlvXkMzjoGqNJj3VgdZPTpeyLbq5Y-uxzidNJONKPhRfiSBwMXXWuhGNDcw9P4rcLgkFgIICPuXpXQbBpUbZmq9Q~ock~Rj46A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      />
+      </div>
+      <div
+        className=" mt-72 rounded-3xs bg-teal-50 shadow-[2px_2px_4px_rgba(0,_0,_0,_0.25)]  flex flex-row items-start justify-center py-5 px-[73px] box-border text-left text-17xl text-cadetblue font-sofia-sans"
+        id="stat"
+      >   
+        <div className="w-full h-[119px] flex flex-col items-end justify-end py-[18px] px-[157px] box-border">
+          <div className="flex flex-row items-start justify-start gap-[24px]">
+            <div className="flex flex-col items-center justify-start gap-[10px]">
+              <div className="relative font-extrabold">100</div>
+              <div className="relative text-5xl font-medium text-darkslategray">
+                Doctors
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-[10px]">
+              <div className="relative font-extrabold">750</div>
+              <div className="relative text-5xl font-medium text-darkslategray">
+                Patients
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-[10px]">
+              <div className="relative font-extrabold">250</div>
+              <div className="relative text-5xl font-medium text-darkslategray">
+                Lab Tests
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-start gap-[10px]">
+              <div className="relative font-extrabold">1000+</div>
+              <div className="relative text-5xl font-medium text-darkslategray">
+                Medicines Sold
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div>
+      <div className="flex">
+        
+        <div className=" top-52">
+          <div
+            className="mx-5 mt-72 flex flex-col items-start justify-start text-[38px] text-teal-800"
+            id="download"
+          >
+            <b className=" mx-5 relative inline-block w-[664.12px] h-[87.43px] shrink-0">
+              <p className="m-0">Download the CareChainAI</p>
+            </b>
+            <div className="mx-5 text-xl text-teal-900 inline-block w-[706px] h-[128.42px] shrink-0">
+              Access video consultation with India’s top doctors on the
+              CareChainAI app. Connect with doctors online, available 24/7, from
+              the comfort of your home.
+            </div>
+          </div>
+          <div className=" mx-5 rounded bg-white box-border w-[408px] h-[68px] overflow-hidden text-gray-400 border-[1px] border-solid border-teal-700">
+            <div className=" relative mx-20 box-border w-px h-[67px] border-r-[1px] border-solid border-teal-800" />
+            <div className="  mx-20 inline-block w-[38px] h-6">+91</div>
+            <div className="  mx-20 mb-10 inline-block w-[129px] h-6">
+              7025655451
+            </div>
+          </div>
+          <div className=" mx-20 font-semibold">
+            Get the link to download the app
+          </div>
+          <div className="ml-10 rounded bg-teal-700 box-border w-[122px] h-[68px] overflow-hidden text-white border-[1px] border-solid border-teal-800 items-center justify-center ">
+            <div className=" mx-10 mt-5  font-semibold inline-block w-[52px] h-6">
+              Send
+            </div>
+          </div>
+        </div>
+        <div>
+         
+            <img
+              className=" w-full bg-cover h-[740px] object-cover "
+              id="mobile"
+              alt=""
+              src="https://s3-alpha-sig.figma.com/img/6698/554b/d470d9c1e14a3eb7e914cd49a825416a?Expires=1698019200&Signature=ovo3WLFPXnzdtzW7kC01RG8yDvqYmxy7mtLnHMoYxQjm-pmMv20Uvx43rr9rrhVc4CBlX2z0GdG7HwYGRAP0aLo5Yc-nQSwC-5VypAdiF~mW2-KsGe0bWz91KW8-Q507ZzVWbhLYFT4dJLrERIUxfrmkxHID8R9A35gAL1VAIb~hjKB4Crig85VWw1KPKHow0e4lAX1dmFb39soniV67Rmpf--ayWwL1M8I3VrlzUunIviDhzfm6nBLpjG9roe7D8Tvk0KYDmxWWPQLQhUfhtZIr6dukgsDrGehDM8VhS6tFSztH1UNIgWG2Ekr6eYuHUEwrVSxZvCziEH8ltU9f9Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            />
+         
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Patient_Dashboard;
+
+/*
+
+<section>
+
+ <div className="h-[4091px] flex flex-row items-start justify-start relative gap-[8px] text-left text-xl text-black font-text-sm-font-semibold">
+      <div className="relative bg-white w-[1440px] h-[4471px] overflow-hidden shrink-0 z-[0]">
+        <img
+          className="absolute top-[3282px] left-[0px] w-[1440px] h-[809px] object-cover opacity-[0.23]"
+          alt=""
+          src="/image-15@2x.png"
+        />
+        <img
+          className="absolute top-[687px] left-[0px] w-[1440px] h-[851.46px] object-cover opacity-[0.32]"
+          alt=""
+          src="/9496304-1@2x.png"
+        />
+        <div className="absolute top-[0px] left-[0px] bg-lightcyan w-[1440px] h-[705px] overflow-hidden">
+          <div className="absolute top-[153px] left-[63px] w-[488px]" />
+          <div
+            className="absolute top-[440px] left-[63px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)]  flex flex-row items-center justify-center border-[1px] border-solid border-green-50"
+            id="card"
+          >
+            <div className="flex flex-row items-center justify-start gap-[13px]">
+              <img
+                className="relative w-[287px] h-[228px] object-cover"
+                alt=""
+                src="/image-3@2x.png"
+              />
+              <div className="flex flex-col items-start justify-start gap-[34px]">
+                <div className="relative leading-[150%] font-medium inline-block w-[217px]">
+                  Instant Video Consultation
+                </div>
+                <div className="relative text-base leading-[150%] font-light inline-block w-[217px] h-[57px] shrink-0">
+                  Norem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="absolute top-[440px] left-[614px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] overflow-hidden flex flex-row items-center justify-center border-[1px] border-solid border-green-50"
+            id="card2"
+          >
+            <div className="flex flex-row items-center justify-start gap-[13px]">
+              <img
+                className="relative w-[287px] h-[228px] object-cover"
+                alt=""
+                src="/image-3@2x.png"
+              />
+              <div className="flex flex-col items-start justify-start gap-[34px]">
+                <div className="relative leading-[150%] font-medium inline-block w-[217px]">
+                  Instant Video Consultation
+                </div>
+                <div className="relative text-base leading-[150%] font-light inline-block w-[217px] h-[57px] shrink-0">
+                  Norem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="absolute top-[440px] left-[1165px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[600px] overflow-hidden flex flex-col items-center justify-center border-[1px] border-solid border-green-50"
+            id="card3"
+          >
+            <div className="flex flex-row items-center justify-start gap-[13px]">
+              <img
+                className="relative w-[287px] h-[228px] object-cover"
+                alt=""
+                src="/image-3@2x.png"
+              />
+              <div className="relative rounded-[88px] bg-teal-300 w-[70px] h-[70px] overflow-hidden shrink-0" />
+              <div className="flex flex-col items-start justify-start gap-[34px]">
+                <div className="relative leading-[150%] font-medium inline-block w-[217px]">
+                  Instant Video Consultation
+                </div>
+                <div className="relative text-base leading-[150%] font-light inline-block w-[217px] h-[57px] shrink-0">
+                  Norem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </div>
+            </div>
+          </div>
+          <section
+            className="  rounded-xl bg-teal-200 w-[1315px] h-[229px]  text-left text-5xl text-black font-text-sm-font-semibold"
+            id="search"
+          >
+            <div className="  flex flex-col items-start justify-start gap-[1px]">
+              <div className="leading-[150%] font-semibold inline-block w-[170px] h-[37px] shrink-0">
+                Search Doctor
+              </div>
+              <div className=" text-sm leading-[150%] inline-block w-[374px] h-[37px] shrink-0">
+                Sorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+            </div>
+            <input
+              className="font-text-sm-font-semibold text-lg bg-white  top-[140px] left-[31px] rounded-sm box-border w-[1005px] h-[57px]  border-[1px] border-solid border-teal-400"
+              name="dropdown"
+              value="Search doctors, clinics, hospitals, etc."
+              placeholder="Mumbai"
+              type="text"
+              defaultValue="Search doctors, clinics, hospitals, etc."
+            />
+            <img
+              className=" top-[0px] left-[1069px] w-[246px] h-[229px] object-cover opacity-[0.85]"
+              alt=""
+              src="/medical-history-2@2x.png"
+            />
+          </section>
+        </div>
+      
+        <section
+          className="absolute top-[749px] left-[59px] flex flex-col items-start justify-start gap-[70px] text-left text-17xl text-teal-500 font-text-sm-font-semibold"
+          id="page2"
+        >
+          <div className="flex flex-col items-start justify-start" id="name">
+            <b className="relative leading-[150%]">
+              Consult top doctors online for any health concern
+            </b>
+            <div className="relative text-5xl leading-[150%] text-teal-800 inline-block w-[728px] h-[68px] shrink-0">
+              Private online consultations with verified doctors in all
+              specialists
+            </div>
+          </div> 
+          <section
+            className="flex flex-row items-start justify-start gap-[36px] text-left text-base text-black font-text-sm-font-semibold"
+            id="horicard"
+          >
+            <div className="relative w-[235.79px] h-[331.97px]" id="Hcard1">
+              <div className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
+                <button
+                  className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[257px] left-[56px] w-[123px] h-[39px]"
+                  autoFocus={true}
+                  id="hcard"
+                >
+                  <div className="absolute top-[0px] left-[0px] rounded-[36px] bg-teal-400 box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-500" />
+                  <div className="absolute top-[8px] left-[11px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-white text-left inline-block w-[101px]">
+                    Consult Now
+                  </div>
+                </button>
+                <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+                  Periods or Pregnancy
+                </div>
+              </div>
+              <img
+                className="absolute top-[8.3px] left-[0px] w-[235.79px] h-[206.44px] object-cover"
+                alt=""
+                src="/image-5@2x.png"
+              />
+            </div>
+            <div
+              className="relative rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden shrink-0 border-[1px] border-solid border-green-50"
+              id="Hcard2"
+            >
+              <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+                Acne or Skin Problem
+              </div>
+              <img
+                className="absolute top-[8px] left-[19px] w-[203px] h-[182px] object-cover"
+                alt=""
+                src="/image-6@2x.png"
+              />
+              <button
+                className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[255px] left-[56px] w-[123px] h-[39px]"
+                autoFocus={true}
+                id="hcard2"
+              >
+                <div className="absolute top-[0px] left-[0px] rounded-2xs bg-teal-400 box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-500" />
+                <div className="absolute top-[8px] left-[11px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-white text-left inline-block w-[101px]">
+                  Consult Now
+                </div>
+              </button>
+            </div>
+            <div className="relative w-[235.79px] h-[331.97px]">
+              <div
+                className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50"
+                id="Hcard3"
+              >
+                <div className="absolute top-[259px] left-[60px] rounded-mini bg-white box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-300" />
+                <button
+                  className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[267px] left-[71px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-teal-800 text-left inline-block w-[101px]"
+                  autoFocus={true}
+                  id="hcard3"
+                >
+                  Consult Now
+                </button>
+                <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+                  Baby not feeling well
+                </div>
+              </div>
+              <img
+                className="absolute top-[3px] left-[12.41px] w-[211px] h-[218px] object-cover"
+                alt=""
+                src="/image-7@2x.png"
+              />
+            </div>
+            <div className="relative w-[235.79px] h-[331.97px]">
+              <div
+                className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50"
+                id="card4"
+              >
+                <div className="absolute top-[259px] left-[60px] rounded-mini bg-white box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-300" />
+                <button
+                  className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[267px] left-[71px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-teal-800 text-left inline-block w-[101px]"
+                  autoFocus={true}
+                  id="hcard4"
+                >
+                  Consult Now
+                </button>
+                <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+                  Periods or Pregnancy
+                </div>
+              </div>
+              <img
+                className="absolute top-[8.3px] left-[0px] w-[235.79px] h-[206.44px] object-cover"
+                alt=""
+                src="/image-51@2x.png"
+              />
+            </div>
+            <div
+              className="relative rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden shrink-0 border-[1px] border-solid border-green-50"
+              id="Hcard5"
+            >
+              <div className="absolute top-[259px] left-[60px] rounded-mini bg-white box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-300" />
+              <button
+                className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[267px] left-[71px] text-base leading-[150%] font-medium font-text-sm-font-semibold text-teal-800 text-left inline-block w-[101px]"
+                autoFocus={true}
+                id="hcard5"
+              >
+                Consult Now
+              </button>
+              <div className="absolute top-[217px] left-[40px] leading-[150%] inline-block w-[163px] h-[23px]">
+                Acne or Skin Problem
+              </div>
+              <img
+                className="absolute top-[8px] left-[19px] w-[203px] h-[182px] object-cover"
+                alt=""
+                src="/image-61@2x.png"
+              />
+            </div>
+          </section>
+        </section>
+        <main
+          className="absolute top-[1817px] left-[59px] flex flex-col items-start justify-start gap-[75px]"
+          id="page4"
+        >
+          <section
+            className="w-[947px] flex flex-col items-start justify-start text-left text-17xl text-teal-500 font-text-sm-font-semibold"
+            id="bookappoint"
+          >
+            <div className="self-stretch relative h-[117px]">
+              <b className="absolute top-[0px] left-[0px] inline-block w-[947px]">
+                Book an appointment with a doctor
+              </b>
+              <div className="absolute top-[52px] left-[0px] text-5xl text-teal-800 inline-block w-[947px]">
+                Book appointments and received experienced doctor insight from
+                various medical fields.
+              </div>
+            </div>
+          </section>
+          <section
+            className="flex flex-row items-center justify-start gap-[31px] text-left text-base text-teal-800 font-text-sm-font-semibold"
+            id="dccard"
+           >
+            <div className="relative w-[406px] h-[234px]" id="Dcard1">
+              <div className="absolute top-[0px] left-[0px] rounded-9xl w-[406px] h-[234px] overflow-hidden  bg-cover bg-no-repeat bg-[top]">
+                <div className="absolute top-[267px] left-[71px] leading-[150%] font-medium inline-block w-[101px]">
+                  Consult Now
+                </div>
+                <div className="absolute top-[180px] left-[255px] w-[136px] h-[39px] text-white">
+                  <div className="absolute top-[0px] left-[0px] w-[136px] flex flex-col items-start justify-start">
+                    <div className="relative rounded-2xs bg-teal-400 box-border w-[136px] h-[39px] border-[1px] border-solid border-teal-500" />
+                  </div>
+                  <div className="absolute top-[8px] left-[20px] flex flex-row items-start justify-start">
+                    <div className="relative leading-[150%] font-semibold inline-block w-[82px] shrink-0">
+                      Book Now
+                    </div>
+                    <img
+                      className="relative w-6 h-6 overflow-hidden shrink-0"
+                      alt=""
+                      src="/arrowright2.svg"
+                    />
+                  </div>
+                </div>
+                <div className="absolute top-[10px] left-[261px] rounded-3xs bg-pink-100 w-[135px] h-[37px] flex flex-row items-center justify-center py-0.5 px-3 box-border text-center text-lg text-pink-900">
+                  <div className="relative leading-[150%] font-medium">
+                    Dentist
+                  </div>
+                </div>
+              </div>
+              <img
+                className="absolute top-[6px] left-[5px] w-[232px] h-[222.23px] object-cover"
+                alt=""
+                src="/image-9@2x.png"
+              />
+            </div>
+            <div className="relative w-[407px] h-[234px]" id="Dcard2">
+              <div className="absolute top-[0px] left-[1px] rounded-9xl w-[406px] h-[234px] overflow-hidden  bg-cover bg-no-repeat bg-[top]">
+                <div className="absolute top-[267px] left-[71px] leading-[150%] font-medium inline-block w-[101px]">
+                  Consult Now
+                </div>
+                <div className="absolute top-[180px] left-[255px] w-[136px] h-[39px] text-white">
+                  <div className="absolute top-[0px] left-[0px] w-[136px] flex flex-col items-start justify-start">
+                    <div className="relative rounded-2xs bg-teal-400 box-border w-[136px] h-[39px] border-[1px] border-solid border-teal-500" />
+                  </div>
+                  <div className="absolute top-[8px] left-[20px] flex flex-row items-start justify-start">
+                    <div className="relative leading-[150%] font-semibold inline-block w-[82px] shrink-0">
+                      Book Now
+                    </div>
+                    <img
+                      className="relative w-6 h-6 overflow-hidden shrink-0"
+                      alt=""
+                      src="/arrowright2.svg"
+                    />
+                  </div>
+                </div>
+                <div className="absolute top-[11px] left-[261px] rounded-3xs bg-purple-100 w-[135px] h-[37px] flex flex-row items-center justify-center py-0.5 px-3 box-border text-center text-lg text-purple-800">
+                  <div className="relative leading-[150%] font-medium">
+                    Gynecologist
+                  </div>
+                </div>
+              </div>
+              <img
+                className="absolute top-[14px] left-[0px] w-[269.16px] h-[219.84px] object-cover"
+                alt=""
+                src="/image-10@2x.png"
+              />
+            </div>
+            <div className="relative w-[406px] h-[234px]" id="Dcard3">
+              <div className="absolute top-[0px] left-[0px] w-[406px] h-[234px]">
+                <div className="absolute top-[0px] left-[0px] rounded-9xl w-[406px] h-[234px] overflow-hidden  bg-cover bg-no-repeat bg-[top]">
+                  <div className="absolute top-[267px] left-[71px] leading-[150%] font-medium inline-block w-[101px]">
+                    Consult Now
+                  </div>
+                  <div className="absolute top-[180px] left-[255px] w-[136px] h-[39px] text-white">
+                    <div className="absolute top-[0px] left-[0px] w-[136px] flex flex-col items-start justify-start">
+                      <div className="relative rounded-2xs bg-teal-400 box-border w-[136px] h-[39px] border-[1px] border-solid border-teal-500" />
+                    </div>
+                    <div className="absolute top-[8px] left-[20px] flex flex-row items-start justify-start">
+                      <div className="relative leading-[150%] font-semibold inline-block w-[82px] shrink-0">
+                        Book Now
+                      </div>
+                      <img
+                        className="relative w-6 h-6 overflow-hidden shrink-0"
+                        alt=""
+                        src="/arrowright2.svg"
+                      />
+                    </div>
+                  </div>
+                  <div className="absolute top-[10px] left-[276px] rounded-3xs bg-green-100 w-[120px] h-[37px] flex flex-row items-center justify-center py-0.5 px-3 box-border text-center text-lg text-green-800">
+                    <div className="relative leading-[150%] font-medium">
+                      Dietitian
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute top-[6px] left-[5px] w-[232px] h-[222.23px]" />
+              </div>
+              <img
+                className="absolute top-[6px] left-[5px] w-[262px] h-[222px] object-cover"
+                alt=""
+                src="/image-12@2x.png"
+              />
+            </div>
+            <div className="relative rounded-2xs bg-green-50 box-border w-[50px] h-[50px] border-[1px] border-solid border-teal-300">
+              <div className="absolute top-[13px] left-[13px] w-6 h-6 flex flex-row items-start justify-start">
+                <img
+                  className="relative w-6 h-6 overflow-hidden shrink-0"
+                  alt=""
+                  src="/arrowright3.svg"
+                />
+              </div>
+            </div>
+          </section>
+        </main>
+        <div className="absolute top-[2340px] left-[512px] text-[32px] font-medium text-teal-800">
+          What our users have to say
+        </div>
+        <main
+          className="absolute top-[2379px] left-[360px] w-[720px] h-[410px]"
+          id="message"
+        />
+        <div className="absolute top-[2388px] left-[194px] w-[818.95px] h-[410px] text-center text-5xl text-cadetblue font-sofia-sans">
+          <img
+            className="absolute top-[155px] left-[-8px] w-[37.05px] h-[60px]"
+            alt=""
+            src="/vector.svg"
+          />
+          <div className="absolute top-[0px] left-[233.05px] w-[585.9px] h-[410px]">
+            <div className="absolute top-[74px] left-[-0.05px] w-[585.9px] flex flex-col items-start justify-start">
+              <div className="self-stretch relative font-semibold">
+                Ankit Choudhary
+              </div>
+            </div>
+            <div className="absolute top-[141px] left-[-0.05px] font-light text-darkslategray inline-block w-[585.9px]">
+              Very easy to book, maintain history. Hassle free from older
+              versions of booking appointment via telephone. Thanks Practo for
+              making it simple.
+            </div>
+          </div>
+          <img
+            className="absolute top-[155px] left-[1023px] w-[37.05px] h-[60px]"
+            alt=""
+            src="/vector1.svg"
+          />
+        </div>
+        <section
+          className="absolute top-[2856px] left-[0px] rounded-3xs bg-teal-50 shadow-[2px_2px_4px_rgba(0,_0,_0,_0.25)] w-[1440px] flex flex-row items-start justify-center py-5 px-[73px] box-border text-left text-17xl text-cadetblue font-sofia-sans"
+          id="stat"
+        >
+          <div className="w-[1304px] h-[119px] flex flex-col items-end justify-end py-[18px] px-[157px] box-border">
+            <div className="flex flex-row items-start justify-start gap-[24px]">
+              <div className="flex flex-col items-center justify-start gap-[10px]">
+                <div className="relative font-extrabold">100</div>
+                <div className="relative text-5xl font-medium text-darkslategray">
+                  Doctors
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-start gap-[10px]">
+                <div className="relative font-extrabold">750</div>
+                <div className="relative text-5xl font-medium text-darkslategray">
+                  Patients
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-start gap-[10px]">
+                <div className="relative font-extrabold">250</div>
+                <div className="relative text-5xl font-medium text-darkslategray">
+                  Lab Tests
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-start gap-[10px]">
+                <div className="relative font-extrabold">1000+</div>
+                <div className="relative text-5xl font-medium text-darkslategray">
+                  Medicines Sold
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="absolute top-[2744px] left-[97px] w-[408px] h-[455px]">
+          <img
+            className="absolute top-[-94px] left-[-79px] w-[598px] h-[598px] object-cover"
+            alt=""
+            src="/image-4@2x.png"
+          />
+        </div>
+        <img
+          className="absolute top-[2852px] left-[1262px] w-[178px] h-[286.68px] object-cover opacity-[0.85]"
+          alt=""
+          src="/tablet-strip-1@2x.png"
+        />
+        <img
+          className="absolute top-[2829.4px] left-[0px] w-[186.67px] h-[294.68px] object-cover opacity-[0.85]"
+          alt=""
+          src="/syringe-1@2x.png"
+        />
+        <img
+          className="absolute top-[3282px] left-[746px] w-[740px] h-[740px] object-cover"
+          id="mobile"
+          alt=""
+          src="/frame-28@2x.png"
+        />
+        <div
+          className="absolute top-[3388px] left-[97px] flex flex-col items-start justify-start text-[38px] text-teal-800"
+           id="download"
+         >
+          <b className="relative inline-block w-[664.12px] h-[87.43px] shrink-0">
+            <p className="m-0">Download the CareChainAI</p>
+          </b>
+          <div className="relative text-xl text-teal-900 inline-block w-[706px] h-[128.42px] shrink-0">
+            Access video consultation with India’s top doctors on the
+            CareChainAI app. Connect with doctors online, available 24/7, from
+            the comfort of your home.
+          </div>
+         </div>
+         <div className="absolute top-[3678px] left-[97px] rounded bg-white box-border w-[408px] h-[68px] overflow-hidden text-gray-400 border-[1px] border-solid border-teal-700">
+          <div className="absolute top-[0.5px] left-[98.5px] box-border w-px h-[67px] border-r-[1px] border-solid border-teal-800" />
+          <div className="absolute top-[22px] left-[26px] inline-block w-[38px] h-6">
+            +91
+          </div>
+          <div className="absolute top-[22px] left-[173px] inline-block w-[129px] h-6">
+            7025655451
+          </div>
+         </div>
+         <div className="absolute top-[3633px] left-[97px] font-semibold">
+          Get the link to download the app
+         </div>
+         <div className="absolute top-[3678px] left-[525px] rounded bg-teal-700 box-border w-[122px] h-[68px] overflow-hidden text-white border-[1px] border-solid border-teal-800">
+          <div className="absolute top-[22px] left-[35px] font-semibold inline-block w-[52px] h-6">
+            Send
+          </div>
+         </div>
+         <div className="absolute top-[3802px] left-[97px] rounded-[46px] bg-teal-700 box-border w-[157px] h-[57px] overflow-hidden border-[1px] border-solid border-teal-800" />
+             <footer
+          className="absolute top-[4091px] left-[0px] w-[1440px] h-[380px] text-left text-5xl text-gray-900 font-text-sm-font-semibold"
+          id="footer"
+        >
+          <div className="absolute top-[0px] left-[0px] bg-teal-100 w-[1440px] h-[380px] overflow-hidden">
+            <img
+              className="absolute top-[108px] left-[0px] w-[173.81px] h-[272px] object-cover opacity-[0.85]"
+              alt=""
+              src="/syringe-11@2x.png"
+            />
+            <img
+              className="absolute top-[0px] left-[1249px] w-[191px] h-[274.43px] object-cover opacity-[0.85]"
+              alt=""
+              src="/syringe-12@2x.png"
+            />
+            <div className="absolute top-[67px] left-[335px] w-[771px] h-[241px] overflow-hidden">
+              <div className="absolute top-[205px] left-[290px] flex flex-row items-center justify-start gap-[12px]">
+                <img className="relative w-8 h-8" alt="" src="/logo2.svg" />
+                <div className="relative leading-[150%] font-semibold">
+                  CareChainAI
+                </div>
+              </div>
+              <div className="absolute top-[0px] left-[0px] w-[771px] h-[170px] text-base text-blue-900">
+                <div className="absolute top-[0px] left-[0px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[98px] left-[0px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[0px] left-[262px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[0px] left-[524px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[98px] left-[524px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[98px] left-[261px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[0px] left-[131px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[98px] left-[131px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[0px] left-[393px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[0px] left-[655px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[98px] left-[655px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+                <div className="absolute top-[98px] left-[393px] leading-[150%] font-semibold inline-block w-[116px]">
+                  Gorem ipsum dolor sit amet consectetur
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute top-[319.16px] left-[419px] leading-[150%] font-semibold text-blue-800 inline-block w-[601px] h-[35.91px]">
+            Copyright © 2023, CareChainAi. All rights reserved.
+          </div>
+        </footer>
+      </div>
+      <section
+        className="absolute my-0 mx-[!important] top-[1428.23px] left-[59px] w-[478px] h-[236.22px] z-[1] text-left text-[64px] text-cadetblue font-sofia-sans"
+        id="nameqote"
+      >
+        <div className="absolute top-[0px] left-[0px] font-extrabold">
+          <p className="m-0">Protect Your Life</p>
+          <p className="m-0">And Take Care Of</p>
+          <p className="m-0">Your Health</p>
+        </div>
+      </section>
+      <main
+        className="my-0 mx-[!important] absolute top-[1393.98px] left-[622px] h-[304.73px] flex flex-row items-start justify-start gap-[62px] z-[2]"
+        id="feature"
+      >
+        <section
+          className="flex flex-col items-start justify-start gap-[106px] text-left text-5xl text-darkslategray font-sofia-sans"
+          id="2sec"
+        >
+          <div
+            className="w-[350px] flex flex-row items-start justify-start gap-[30px]"
+            id="sec1"
+          >
+            <img className="relative w-9 h-10" alt="" src="/vector2.svg" />
+            <div className="flex-1 flex flex-col items-start justify-start gap-[10px]">
+              <div className="self-stretch relative font-medium">
+                Book an appointment
+              </div>
+              <div className="self-stretch relative text-base font-light text-slategray">
+                Book an appointment with a doctor to discuss health concerns and
+                receive treatment.
+              </div>
+            </div>
+          </div>
+          <div
+            className="w-[350px] flex flex-row items-start justify-start gap-[30px]"
+            id="sec2"
+          >
+            <img
+              className="relative w-[41.27px] h-10"
+              alt=""
+              src="/vector3.svg"
+            />
+            <section className="flex-1 h-24 flex flex-col items-start justify-start gap-[10px] text-left text-5xl text-darkslategray font-sofia-sans">
+              <div className="self-stretch relative font-medium">
+                Buy Medicines
+              </div>
+              <div className="self-stretch relative text-base font-light text-slategray">
+                We ensure our customers get 100% genuine medicines with the
+                highest savings in the shortest time possible.
+              </div>
+            </section>
+          </div>
+        </section>
+        <section
+          className="flex flex-col items-start justify-start gap-[106px] text-left text-5xl text-darkslategray font-sofia-sans"
+          id="sec4"
+        >
+          <div
+            className="w-[350px] flex flex-row items-start justify-start gap-[30px]"
+            id="sec3"
+          >
+            <img
+              className="relative w-[35.38px] h-10"
+              alt=""
+              src="/vector4.svg"
+            />
+            <div className="flex-1 flex flex-col items-start justify-start gap-[10px]">
+              <div className="self-stretch relative font-medium">
+                Track your medical recrods
+              </div>
+              <div className="self-stretch relative text-base font-light text-slategray">
+                Your medical records are managed in a digital format and shared
+                only with authorized healthcare with your consent.
+              </div>
+            </div>
+          </div>
+          <div
+            className="w-[350px] flex flex-row items-start justify-start gap-[30px]"
+            id="sec4"
+          >
+            <img
+              className="relative w-[41.9px] h-10"
+              alt=""
+              src="/vector5.svg"
+            />
+            <div className="flex-1 flex flex-col items-start justify-start gap-[10px]">
+              <div className="self-stretch relative font-medium">
+                Book lab tests
+              </div>
+              <div className="self-stretch relative text-base font-light text-slategray">
+                Book an appointment with a doctor to discuss health concerns and
+                receive treatment.
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div className=" bg-white dark:bg-secondary-dark-bg h-full w-full ">
       <section className="text-gray-600 body-font  bg-white dark:bg-secondary-dark-bg  w-full h-full mt-5 mb-5 ">
         <div className="mt-10 md:h-full w-full bg-white dark:bg-secondary-dark-bg relative ">
@@ -479,359 +1466,5 @@ const Patient_Dashboard = () => {
           reserved!
         </div>
       </section>
-
-      <div className="flex flex-wrap lg:flex-nowrap justify-center ">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
-          <div className="flex justify-between items-center">
-            <div>
-              <p className="font-bold text-gray-400">Earnings</p>
-              <p className="text-2xl">$63,448.78</p>
-            </div>
-            <button
-              type="button"
-              style={{ backgroundColor: currentColor }}
-              className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4"
-            >
-              <BsCurrencyDollar />
-            </button>
-          </div>
-          <div className="mt-6">
-            <Button
-              color="white"
-              bgColor={currentColor}
-              text="Download"
-              borderRadius="10px"
-            />
-          </div>
-        </div>
-        <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
-          {earningData.map((item) => (
-            <div
-              key={item.title}
-              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl "
-            >
-              <button
-                type="button"
-                style={{
-                  color: item.iconColor,
-                  backgroundColor: item.iconBg,
-                }}
-                className="text-2xl opacity-0.9 rounded-full  p-4 hover:drop-shadow-xl"
-              >
-                {item.icon}
-              </button>
-              <p className="mt-3">
-                <span className="text-lg font-semibold">{item.amount}</span>
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
-                  {item.percentage}
-                </span>
-              </p>
-              <p className="text-sm text-gray-400  mt-1">{item.title}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex gap-10 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
-          <div className="flex justify-between">
-            <p className="font-semibold text-xl">Revenue Updates</p>
-            <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
-              
-                <span>Budget</span>
-              </p>
-            </div>
-          </div>
-          <div className="mt-10 flex gap-10 flex-wrap justify-center">
-            <div className=" border-r-1 border-color m-4 pr-10">
-              <div>
-                <p>
-                  <span className="text-3xl font-semibold">$93,438</span>
-                  <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
-                    23%
-                  </span>
-                </p>
-                <p className="text-gray-500 mt-1">Budget</p>
-              </div>
-              <div className="mt-8">
-                <p className="text-3xl font-semibold">$48,487</p>
-
-                <p className="text-gray-500 mt-1">Expense</p>
-              </div>
-
-              <div className="mt-5">
-                <SparkLine
-                  currentColor={currentColor}
-                  id="line-sparkLine"
-                  type="Line"
-                  height="80px"
-                  width="250px"
-                  data={SparklineAreaData}
-                  color={currentColor}
-                />
-              </div>
-              <div className="mt-10">
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Download Report"
-                  borderRadius="10px"
-                />
-              </div>
-            </div>
-            <div>
-              <Stacked currentMode={currentMode} width="320px" height="360px" />
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            className=" rounded-2xl md:w-400 p-4 m-3"
-            style={{ backgroundColor: currentColor }}
-          >
-            <div className="flex justify-between items-center ">
-              <p className="font-semibold text-white text-2xl">Earnings</p>
-
-              <div>
-                <p className="text-2xl text-white font-semibold mt-8">
-                  $63,448.78
-                </p>
-                <p className="text-gray-200">Monthly revenue</p>
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <SparkLine
-                currentColor={currentColor}
-                id="column-sparkLine"
-                height="100px"
-                type="Column"
-                data={SparklineAreaData}
-                width="320"
-                color="rgb(242, 252, 253)"
-              />
-            </div>
-          </div>
-
-          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
-            <div>
-              <p className="text-2xl font-semibold ">$43,246</p>
-              <p className="text-gray-400">Yearly sales</p>
-            </div>
-
-            <div className="w-40">
-              <Pie
-                id="pie-chart"
-                data={ecomPieChartData}
-                legendVisiblity={false}
-                height="160px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex gap-10 m-4 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
-          <div className="flex justify-between items-center gap-2">
-            <p className="text-xl font-semibold">Recent Transactions</p>
-            <DropDown currentMode={currentMode} />
-          </div>
-          <div className="mt-10 w-72 md:w-400">
-            {recentTransactions.map((item) => (
-              <div key={item.title} className="flex justify-between mt-4">
-                <div className="flex gap-4">
-                  <button
-                    type="button"
-                    style={{
-                      color: item.iconColor,
-                      backgroundColor: item.iconBg,
-                    }}
-                    className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
-                  >
-                    {item.icon}
-                  </button>
-                  <div>
-                    <p className="text-md font-semibold">{item.title}</p>
-                    <p className="text-sm text-gray-400">{item.desc}</p>
-                  </div>
-                </div>
-                <p className={`text-${item.pcColor}`}>{item.amount}</p>
-              </div>
-            ))}
-          </div>
-          <div className="flex justify-between items-center mt-5 border-t-1 border-color">
-            <div className="mt-3">
-              <Button
-                color="white"
-                bgColor={currentColor}
-                text="Add"
-                borderRadius="10px"
-              />
-            </div>
-
-            <p className="text-gray-400 text-sm">36 Recent Transactions</p>
-          </div>
-        </div>
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl w-96 md:w-760">
-          <div className="flex justify-between items-center gap-2 mb-10">
-            <p className="text-xl font-semibold">Sales Overview</p>
-            <DropDown currentMode={currentMode} />
-          </div>
-          <div className="md:w-full overflow-auto">
-            <LineChart />
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-wrap justify-center">
-        <div className="md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
-          <div className="flex justify-between">
-            <p className="text-xl font-semibold">Weekly Stats</p>
-            <button
-              type="button"
-              className="text-xl font-semibold text-gray-500"
-            >
-              <IoIosMore />
-            </button>
-          </div>
-
-          <div className="mt-10 ">
-            {weeklyStats.map((item) => (
-              <div
-                key={item.title}
-                className="flex justify-between mt-4 w-full"
-              >
-                <div className="flex gap-4">
-                  <button
-                    type="button"
-                    style={{ background: item.iconBg }}
-                    className="text-2xl hover:drop-shadow-xl text-white rounded-full p-3"
-                  >
-                    {item.icon}
-                  </button>
-                  <div>
-                    <p className="text-md font-semibold">{item.title}</p>
-                    <p className="text-sm text-gray-400">{item.desc}</p>
-                  </div>
-                </div>
-
-                <p className={`text-${item.pcColor}`}>{item.amount}</p>
-              </div>
-            ))}
-            <div className="mt-4">
-              <SparkLine
-                currentColor={currentColor}
-                id="area-sparkLine"
-                height="160px"
-                type="Area"
-                data={SparklineAreaData}
-                width="320"
-                color="rgb(242, 252, 253)"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
-          <div className="flex justify-between">
-            <p className="text-xl font-semibold">MedicalPro Branding</p>
-            <button
-              type="button"
-              className="text-xl font-semibold text-gray-400"
-            >
-              <IoIosMore />
-            </button>
-          </div>
-          <p className="text-xs cursor-pointer hover:drop-shadow-xl font-semibold rounded-lg w-24 bg-orange-400 py-0.5 px-2 text-gray-200 mt-10">
-            16 APR, 2021
-          </p>
-
-          <div className="flex gap-4 border-b-1 border-color mt-6">
-            {medicalproBranding.data.map((item) => (
-              <div
-                key={item.title}
-                className="border-r-1 border-color pr-4 pb-2"
-              >
-                <p className="text-xs text-gray-400">{item.title}</p>
-                <p className="text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="border-b-1 border-color pb-4 mt-2">
-            <p className="text-md font-semibold mb-2">Teams</p>
-
-            <div className="flex gap-4">
-              {medicalproBranding.teams.map((item) => (
-                <p
-                  key={item.name}
-                  style={{ background: item.color }}
-                  className="cursor-pointer hover:drop-shadow-xl text-white py-0.5 px-3 rounded-lg text-xs"
-                >
-                  {item.name}
-                </p>
-              ))}
-            </div>
-          </div>
-          <div className="mt-2">
-            <p className="text-md font-semibold mb-2">Leaders</p>
-            <div className="flex gap-4">
-              {medicalproBranding.leaders.map((item, index) => (
-                <img
-                  key={index}
-                  className="rounded-full w-8 h-8"
-                  src={item.image}
-                  alt=""
-                />
-              ))}
-            </div>
-          </div>
-          <div className="flex justify-between items-center mt-5 border-t-1 border-color">
-            <div className="mt-3">
-              <Button
-                color="white"
-                bgColor={currentColor}
-                text="Add"
-                borderRadius="10px"
-              />
-            </div>
-
-            <p className="text-gray-400 text-sm">36 Recent Transactions</p>
-          </div>
-        </div>
-        <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
-          <div className="flex justify-between">
-            <p className="text-xl font-semibold">Daily Activities</p>
-            <button
-              type="button"
-              className="text-xl font-semibold text-gray-500"
-            >
-              <IoIosMore />
-            </button>
-          </div>
-          <div className="mt-10">
-            <img className="md:w-96 h-50 " src={product9} alt="" />
-            <div className="mt-8">
-              <p className="font-semibold text-lg">React 18 coming soon!</p>
-              <p className="text-gray-400 ">By Johnathan Doe</p>
-              <p className="mt-8 text-sm text-gray-400">
-                This will be the small description for the news you have shown
-                here. There could be some great info.
-              </p>
-              <div className="mt-3">
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Read More"
-                  borderRadius="10px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  );
-};
-
-export default Patient_Dashboard;
+</section>*/

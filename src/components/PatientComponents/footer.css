@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --text-2xl-font-semibold: Inter;
+
+  /* font sizes */
+  --text-2xl-font-semibold-size: 24px;
+  --font-size-xs: 12px;
+  --font-size-xl: 20px;
+  --font-size-sm: 14px;
+  --font-size-3xl: 22px;
+  --font-size-base: 16px;
+
+  /* Colors */
+  --gray-900: #111928;
+  --white: #fff;
+  --teal-100: #d5f5f6;
+  --black: #000;
+  --teal-700: #036672;
+  --teal-800: #05505c;
+  --teal-900: #014451;
+  --gray-400: #9ca3af;
+  --blue-900: #233876;
+  --teal-300: #7edce2;
+  --teal-50: #edfafa;
+  --teal-400: #16bdca;
+
+  /* Gaps */
+  --gap-xs: 12px;
+  --gap-6xs: 7px;
+
+  /* Paddings */
+  --padding-4xs: 9px;
+  --padding-5xs: 8px;
+  --padding-11xs: 2px;
+  --padding-10xs: 3px;
+
+  /* Border radiuses */
+  --br-9xs: 4px;
+  --br-xs: 12px;
+}
+
+.logo-icon2 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.flowbite2 {
+
+  line-height: 150%;
+  font-weight: 600;
+}
+.logo1 {
+
+  top: 272px;
+  left: 625px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.gorem-ipsum-dolor,
+.gorem-ipsum-dolor1 {
+  
+  top: 0;
+  left: 0;
+  line-height: 150%;
+  font-weight: 600;
+  display: inline-block;
+  width: 116px;
+}
+.gorem-ipsum-dolor1 {
+  top: 98px;
+}
+.gorem-ipsum-dolor2,
+.gorem-ipsum-dolor3,
+.gorem-ipsum-dolor4,
+.gorem-ipsum-dolor5,
+.gorem-ipsum-dolor6 {
+ 
+  top: 0;
+  left: 262px;
+  line-height: 150%;
+  font-weight: 600;
+  display: inline-block;
+  width: 116px;
+}
+.gorem-ipsum-dolor3,
+.gorem-ipsum-dolor4,
+.gorem-ipsum-dolor5,
+.gorem-ipsum-dolor6 {
+  left: 524px;
+}
+.gorem-ipsum-dolor4,
+.gorem-ipsum-dolor5,
+.gorem-ipsum-dolor6 {
+  top: 98px;
+}
+.gorem-ipsum-dolor5,
+.gorem-ipsum-dolor6 {
+  left: 277px;
+}
+.gorem-ipsum-dolor6 {
+  top: 0;
+  left: 131px;
+}
+.gorem-ipsum-dolor10,
+.gorem-ipsum-dolor11,
+.gorem-ipsum-dolor7,
+.gorem-ipsum-dolor8,
+.gorem-ipsum-dolor9 {
+ 
+  top: 98px;
+  left: 131px;
+  line-height: 150%;
+  font-weight: 600;
+  display: inline-block;
+  width: 116px;
+}
+.gorem-ipsum-dolor10,
+.gorem-ipsum-dolor11,
+.gorem-ipsum-dolor8,
+.gorem-ipsum-dolor9 {
+  top: 0;
+  left: 393px;
+}
+.gorem-ipsum-dolor10,
+.gorem-ipsum-dolor11,
+.gorem-ipsum-dolor9 {
+  left: 655px;
+}
+.gorem-ipsum-dolor10,
+.gorem-ipsum-dolor11 {
+  top: 98px;
+}
+.gorem-ipsum-dolor11 {
+  left: 393px;
+}
+.gorem-ipsum-dolor-sit-amet-con-parent {
+ 
+  top: 67px;
+  left: 335px;
+  width: 771px;
+  height: 170px;
+  font-size: var(--font-size-base);
+  color: var(--blue-900);
+}
+.syringe-1-icon,
+.syringe-1-icon1 {
+
+  top: 108px;
+  left: 0;
+  width: 173.81px;
+  height: 272px;
+  object-fit: cover;
+  opacity: 0.85;
+}
+.syringe-1-icon1 {
+  top: 0;
+  left: 1249px;
+  width: 191px;
+  height: 274.43px;
+}
+.logo-parent {
+  background-color: var(--teal-100);
+  width: 1440px;
+  height: 380px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-2xl-font-semibold-size);
+  color: var(--gray-900);
+  font-family: var(--text-2xl-font-semibold);
+}

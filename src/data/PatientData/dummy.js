@@ -472,8 +472,23 @@ export const employeesGrid = [
     width: '125',
     textAlign: 'Center' },
 ];
+export const home1 =[
+  {
+    Id:1,
+    header:" Instant Video Consultation",
+    dec:"Connect within 60 sec",
+    
+  }, 
+  {
+    Id:2,
+    header:"Find Doctor Near You",
+    dec:"Confirm appointment"
+  }
+ 
+  
+];
 export const CardData = [
-  { Id:"1",
+  { Id:'1',
     Name:"Dr Praksh ambre",
     Edu:"MBBBS ",
     Exp:"5 years",
@@ -482,35 +497,35 @@ export const CardData = [
   },
   
     { 
-      Id:"2",
+      Id:'2',
    Name:"dr harsh shigwan",
    Edu:"xdmxm imdimmpoiam psmmrwoi",
    Exp:"9 years",
    City:"Pune",
    Det:"i am doctor and cdjfv rjckrwcewcfvds"
  },
-    {Id:"3",
+    {Id:'3',
    Name:"dr uma bahrti ",
    Edu:"MBBScccixokm",
    Exp:"90 ",
    City:"Banglore",
    Det:"i am doctor and cdjfv rjckrwcewcfvds"
  },
-    { Id:"4",
+    { Id:'4',
    Name:"dr praksh",
    Edu:"MBBS",
    Exp:"5 years",
    City:"Chennai",
    Det:"i am doctor and cdjfv rjckrwcewcfvds"
  },
-    { Id:"5",
+    { Id:'5',
    Name:"dr praksh",
    Edu:"MBBS",
    Exp:"5 years",
    City:"Pune",
    Det:"i am doctor and cdjfv rjckrwcewcfvds"
    }, 
- {Id:"6",
+ {Id:'6',
   Name:"dr praksh",
   Edu:"MBBS",
   Exp:"5 years",
@@ -518,7 +533,7 @@ export const CardData = [
   Det:"i am doctor and cdjfv rjckrwcewcfvds"
 },
   
-  {Id:"7",
+  {Id:'7',
  Name:"dr praksh",
  Edu:"MBBS",
  Exp:"5 years",
@@ -526,7 +541,7 @@ export const CardData = [
  Det:"i am doctor and cdjfv rjckrwcewcfvds"
  }, 
  
-  { Id:"8",
+  { Id:'8',
  Name:"dr Saloni shigwan",
  Edu:"MBBS",
  Exp:"5 years",

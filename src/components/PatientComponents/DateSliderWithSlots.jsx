@@ -84,52 +84,31 @@
 //   };
 
 // export default DateSliderWithSlots;
-
-// DateRangeSlider.js
-import React, { useState } from 'react';
 import TimeSlots from '../PatientComponents/TimeSlots';
 
-function DateSliderWithSlots() {
-  const [selectedDate, setSelectedDate] = useState(null);
-
-  const handleDateClick = (date) => {
-    setSelectedDate(date);
-  };
-
-  // Replace this with your logic to get today and tomorrow's date
-  const today = new Date().toLocaleDateString();
-  const tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toLocaleDateString();
-
-  return (
-    <div className="p-4">
-      <h1 className="text-2xl font-semibold">Date Range Slider</h1>
-      <div className="flex space-x-4 mt-4">
-        <div>
-          <p className="text-lg font-semibold">Today</p>
-          <div
-            className={`cursor-pointer p-2 rounded-full border ${
-              selectedDate === today ? 'bg-blue-500 text-white' : 'bg-gray-200'
-            }`}
-            onClick={() => handleDateClick(today)}
-          >
-            {today}
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+const DateSliderWithSlots = () => {
+    const [selectedDates, setSelectedDates] = useState([new Date()]);
+  
+    const handleChange = (selectedDates) => {
+      setSelectedDates(selectedDates);
+    };
+  
+    return (
+      <div>
+        <DatePicker
+          selectedDates={selectedDates}
+          onChange={handleChange}
+        />
+        {selectedDates.length > 0 && (
+          <div>
+            <h2>Appointment time slots for {selectedDates[0].toLocaleDateString()}</h2>
+            <TimeSlots />
           </div>
-        </div>
-        <div>
-          <p className="text-lg font-semibold">Tomorrow</p>
-          <div
-            className={`cursor-pointer p-2 rounded-full border ${
-              selectedDate === tomorrow ? 'bg-blue-500 text-white' : 'bg-gray-200'
-            }`}
-            onClick={() => handleDateClick(tomorrow)}
-          >
-            {tomorrow}
-          </div>
-        </div>
+        )}
       </div>
-      {selectedDate && <TimeSlots date={selectedDate} />}
-    </div>
-  );
-}
-
-export default DateSliderWithSlots;
+    );
+  };
+  
+  export default DateSliderWithSlots;

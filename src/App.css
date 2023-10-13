@@ -3,6 +3,9 @@
 .sidebar {
   box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
 }
+.bg-herro-pattern {
+  background-image: url('https://s3.ap-southeast-1.amazonaws.com/www.practostatic.com/consumer-home/desktop/images/1597423628/chronic_consumer_banner_dweb.png');
+}
 .nav-item,
 .navbar {
   z-index: 10000;

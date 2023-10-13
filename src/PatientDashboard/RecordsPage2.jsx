@@ -74,9 +74,9 @@ const RecordsPage2 = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-secondary-dark-bg container mx-auto p-4 animate-form-in">
+    <div className="bg-teal-50 dark:bg-secondary-dark-bg container mx-auto p-4 animate-form-in">
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="mb-4">
+        <div className="mb-4 ">
           <label htmlFor="image" className="dark:text-white block font-semibold">
             Image
           </label>
@@ -85,7 +85,7 @@ const RecordsPage2 = () => {
             id="image"
             accept="image/*"
             onChange={(e) => setImage(e.target.files[0])}
-            className="dark:text-white w-full py-2 px-3 border rounded focus:outline-none focus:ring focus:border-blue-300"
+            className="dark:text-white w-full py-2 px-3 border-2 rounded focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <div className="mb-4">
@@ -97,7 +97,7 @@ const RecordsPage2 = () => {
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full py-2 px-3 border rounded focus:outline-none focus:ring focus:border-blue-300"
+            className="w-96 h-7 py-2 px-3 mt-3 rounded focus:outline-none focus:ring focus:border-blue-100 border-1 border-solid border-teal-400"
           />
         </div>
         <div className="mb-4">
@@ -109,7 +109,7 @@ const RecordsPage2 = () => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full py-2 px-3 border rounded focus:outline-none focus:ring focus:border-blue-300"
+            className="w-2/3 h-7 py-2 px-3 mt-3  border-1 border-solid border-teal-400 rounded focus:outline-none focus:ring focus:border-blue-300"
           />
         </div>
         <div className="mb-4 relative">
@@ -121,7 +121,7 @@ const RecordsPage2 = () => {
               type="text"
               readOnly
               value={date.toLocaleDateString()} // Display the date in your preferred format
-              className="w-full py-2 px-3 border rounded focus:outline-none focus:ring focus:border-blue-300 cursor-pointer"
+              className="w-96 h-7 py-2 px-3 mt-3  border-1 border-solid border-teal-400 rounded focus:outline-none focus:ring focus:border-blue-300 cursor-pointer"
               onClick={toggleCalendar} // Show calendar when the input is clicked
             />
             {showCalendar && ( // Conditionally render the calendar based on showCalendar state
@@ -144,7 +144,7 @@ const RecordsPage2 = () => {
             id="type"
             value={type}
             onChange={(e) => setType(e.target.value)}
-            className="w-full py-2 px-3 border rounded focus:outline-none focus:ring focus:border-blue-300"
+            className="w-96 h-12 pt px-3 mt-3  border-1 border-solid border-teal-400 rounded focus:outline-none focus:ring focus:border-blue-300"
           >
             <option value="report">
               <IoIosAdd name="report" /> Report

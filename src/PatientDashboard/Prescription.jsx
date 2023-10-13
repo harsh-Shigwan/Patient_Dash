@@ -1,4 +1,69 @@
-import React, { useState, useEffect } from 'react';
+
+
+import React, { Component } from "react"
+import "./Prescription.css";
+
+const Prescription = () => {
+  return (
+  <div>
+              <div className="background-upper-child" />
+              <div className="parent">
+                <div className="div">16/10/23</div>
+                <div className="dr-ashish-wrapper">
+                  <div className="dr-ashish">Dr. Ashish</div>
+                </div>
+                <div className="lorem-ipsum-dolor-sit-amet-co-wrapper">
+                  <div className="lorem-ipsum-dolor">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis.
+                  </div>
+                </div>
+              </div>
+              <div className="group">
+                <div className="div">16/10/23</div>
+                <div className="dr-ashish-wrapper">
+                  <div className="dr-ashish">Dr. Ashish</div>
+                </div>
+                <div className="lorem-ipsum-dolor-sit-amet-co-wrapper">
+                  <div className="lorem-ipsum-dolor">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate libero et velit interdum, ac aliquet odio
+                    mattis.
+                  </div>
+                </div>
+           </div>
+             </div>
+        
+     
+   
+  );
+};
+
+export default  Prescription;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { useState, useEffect } from 'react';
 
 const Prescription = () => {
   const [prescriptions, setPrescriptions] = useState([]);
@@ -80,4 +145,4 @@ const Prescription = () => {
       </div>
     )
   };
-export default Prescription;
+export default Prescription;*/
