@@ -64,7 +64,9 @@ module.exports = {
         "pink-900": "#751a3d",
         lightcyan: "#e5fcff",
         "teal-200": "#afecef",
+        
       },
+      
       spacing: {},
       borderWidth: {
         1: '1px',
@@ -121,3 +123,8 @@ module.exports = {
     preflight: false,
   },
 };
+
+
+
+
+

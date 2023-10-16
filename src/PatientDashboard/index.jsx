@@ -24,6 +24,15 @@ export { default as Prescription } from '../PatientDashboard/Prescription';
 export { default as Review} from '../PatientDashboard/Review';
 export { default as Emergency} from '../PatientDashboard/Emergency';
 export { default as Consultation} from '../PatientDashboard/Consultation';
+export { default as Consultation2} from '../PatientDashboard/Consultation2';
+export { default as Consultation3} from '../PatientDashboard/Consultation3';
+export { default as Consultation4} from '../PatientDashboard/Consultation4';
+export { default as Consultation5} from '../PatientDashboard/Consultation5';
+export { default as Consultation6} from '../PatientDashboard/Consultation6';
+export { default as Consultation7} from '../PatientDashboard/Consultation7';
+
+export { default as Doc1} from '../PatientDashboard/Doc1';
+
 export { default as Billing}from '../PatientDashboard/Billing';
 export { default as QnA } from '../PatientDashboard/QnA';
 export { default as Reminder} from './Reminder';

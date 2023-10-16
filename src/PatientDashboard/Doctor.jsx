@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { useMotionValue, useTransform, motion } from "framer-motion";
+//import { useNavigate,Route,Routes } from 'react-router-dom';
+import drop from "../data/PatientData/drop.jpg";
 import { CardData } from "../data/PatientData/dummy";
 import { dropdownData, dropdown1Data } from "../data/PatientData/dummy";
 import { useStateContext } from "../contexts/PatientContext/ContextProvider";
@@ -71,11 +73,18 @@ const Doctor = () => {
   const rotateY = useTransform(y, [100, -100], [-30, 30]);
 
   const navigate = useNavigate();
+  const navigateToContacts = () => {
+ 
+    navigate('/Consultation');
+  }
+  // const navigate = useNavigate();
+  // const navigateToContacts = () => {
+ 
+  //   navigate1('/Appointment');
+  // }
 
-  // const handleButtonClick = () => {
-  //   // Use navigate to go to another page
-  //   navigate('/TimesSlot');
-  // };
+
+  
 
   const [details, setdetails] = useState([]);
   const detailpage = (Doctor) => {
@@ -87,6 +96,7 @@ const Doctor = () => {
   function scrollWin() {
     window.scrollTo(0, 0);
   }
+  
 
   // // Rest of your detailpage function logic
   // setdetails([{ ...Doctor }]);
@@ -154,8 +164,8 @@ const Doctor = () => {
           <div className="absolute top-[28px] left-[16px] box-border w-[17px] h-0.5 border-t-[2px] border-solid border-teal-800" />
           <img
             className="absolute top-[32px] left-[21px] w-2 h-0.5"
-            alt=""
-            src="/line-7.svg"
+            alt="hii"
+            src={drop}
           />
         </button>
         <button
@@ -168,8 +178,8 @@ const Doctor = () => {
           </div>
           <img
             className="relative rounded-10xs w-5 h-5 overflow-hidden shrink-0"
-            alt=""
-            src="/chevrondown.svg"
+            alt="hii"
+            src={drop}
           />
         </button>
         <button
@@ -183,7 +193,7 @@ const Doctor = () => {
           <img
             className="relative rounded-10xs w-5 h-5 overflow-hidden shrink-0"
             alt=""
-            src="/chevrondown.svg"
+            src={drop}
           />
         </button>
         <button
@@ -197,7 +207,7 @@ const Doctor = () => {
           <img
             className="relative rounded-10xs w-5 h-5 overflow-hidden shrink-0"
             alt=""
-            src="/chevrondown.svg"
+            src={drop}
           />
         </button>
         <button
@@ -211,7 +221,7 @@ const Doctor = () => {
           <img
             className="relative rounded-10xs w-5 h-5 overflow-hidden shrink-0"
             alt=""
-            src="/chevrondown.svg"
+            src={drop}
           />
         </button>
       </section>
@@ -252,14 +262,15 @@ const Doctor = () => {
       </div>
       <button
         className="cursor-pointer [border:none] py-[5px] px-[7px] bg-primary-700 absolute top-[235px] left-[254px] rounded-8xs shadow-[0px_2px_10px_rgba(0,_0,_0,_0.2)] w-[185px] h-10 overflow-hidden flex flex-row items-center justify-center box-border"
-        autoFocus={true}
+        autoFocus={true} onClick={navigateToContacts}
       >
         <div className="relative text-base leading-[150%] font-semibold font-text-2xl-font-semibold text-white text-left">
           Online Consultation
-        </div>
+        </div> 
       </button>
       <button
         className="cursor-pointer [border:none] py-[5px] px-[7px] bg-primary-700 absolute top-[235px] left-[455px] rounded-8xs shadow-[0px_2px_10px_rgba(0,_0,_0,_0.2)] w-[185px] h-10 overflow-hidden flex flex-row items-center justify-center box-border"
+        onclick={navigateToContacts}
         autoFocus={true}
       >
         <div className="relative text-base leading-[150%] font-semibold font-text-2xl-font-semibold text-white text-left">
@@ -314,6 +325,60 @@ const Doctor = () => {
       src="https://s3-alpha-sig.figma.com/img/91bd/bc0b/0741bbfda58053dc28896dab7f0c49d0?Expires=1698019200&Signature=m6AtAsfq842PjkJjPHQt-ClRmUkn2gQXgE09u~2SdP6sMZPUq-A0lAu2ZUnxBwlfKtB5~ftUsKfp~gUVUNGtHREepB-8r~Y-LpDGdVSyDVRFLxt6KPa6uUR8G2QpP5JXic7ftzr0olcf5paxTgmUZOHXfJwQTDrQdWEIkLL68cM9svbWye2LMhJ~TLq73C~kSo~9AdOvhAngjDogA9dA0rk~AgmU3z~1JoTXaxfTgp0U2s-NjbE8qjpFYdBIt4unyt5KMkc5RlQdxEapdD1Bc-YiPmlbBirz9Ly9o~vSnOb1-l8m6fTXoN1iPdqwvQ9oEOJIUWF8Xh~sdDZ1HDq2XA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
     />
   </div></div></div>
+  <div className="relative mt-10 bg-teal-100 w-full h-[380px] overflow-hidden text-left text-5xl text-gray-900 font-text-2xl-font-semibold">
+      <div className="absolute top-[272px] left-[400px] flex flex-row items-center justify-start gap-[12px]">
+        <img className="relative w-8 h-8" alt="" src="/logo.svg" />
+        <div className="relative leading-[150%] font-semibold">CareChainAI</div>
+      </div>
+      <div className="absolute top-[67px] left-[200px] w-[771px] h-[170px] text-base text-blue-900">
+        <div className="absolute top-[0px] left-[0px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[98px] left-[0px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[0px] left-[262px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[0px] left-[524px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[98px] left-[524px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[98px] left-[277px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[0px] left-[131px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[98px] left-[131px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[0px] left-[393px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[0px] left-[655px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[98px] left-[655px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+        <div className="absolute top-[98px] left-[393px] leading-[150%] font-semibold inline-block w-[116px]">
+          Gorem ipsum dolor sit amet consectetur
+        </div>
+      </div>
+      <img
+        className="absolute top-[108px] left-[0px] w-[173.81px] h-[272px] object-cover opacity-[0.85]"
+        alt=""
+        src="/syringe-1@2x.png"
+      />
+      <img
+        className="absolute top-[0px] left-[1249px] w-[191px] h-[274.43px] object-cover opacity-[0.85]"
+        alt=""
+        src="/syringe-11@2x.png"
+      />
+    </div>
     </div>
   );
 };
