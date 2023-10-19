@@ -51,7 +51,12 @@ const Consultation4 = () => {
         <div className="absolute top-[243.89px] left-[48.63px] text-lg leading-[150%] font-medium">
           Patients Name
         </div>
-        <div className="absolute top-[276.89px] left-[48.65px] bg-white box-border w-[304px] h-[43px] overflow-hidden [transform:_rotate(-0.13deg)] [transform-origin:0_0] border-[1px] border-solid border-gray-400" />
+        <input
+        className="absolute top-[276.89px] left-[48.65px] bg-white box-border w-[304px] h-[43px] overflow-hidden [transform:_rotate(-0.13deg)] [transform-origin:0_0] border-[1px] border-solid border-gray-400"
+        placeholder="Name"
+        type="text"
+      />
+        {/* <div className="absolute top-[276.89px] left-[48.65px] bg-white box-border w-[304px] h-[43px] overflow-hidden [transform:_rotate(-0.13deg)] [transform-origin:0_0] border-[1px] border-solid border-gray-400" /> */}
         <div className="absolute top-[130.89px] left-[48.33px] w-[203px] h-[55px] [transform:_rotate(-0.13deg)] [transform-origin:0_0]">
           <img
             className="absolute top-[0px] left-[0px] rounded-101xl w-[55px] h-[55px] object-cover"
@@ -95,6 +100,7 @@ const Consultation4 = () => {
       />
     </div>
     </div>
+   
   );
 };
 

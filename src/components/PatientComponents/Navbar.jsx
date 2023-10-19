@@ -5,7 +5,7 @@ import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-
+import { useNavigate, useHistory } from "react-router-dom";
 import avatar from "../../data/PatientData/avatar.jpg";
 import { Cart, Chat, Notification, UserProfile } from "../PatientComponents"
 import { useStateContext } from "../../contexts/PatientContext/ContextProvider";
@@ -57,12 +57,21 @@ const Navbar = () => {
   }, [screenSize]);
 
   const handleActiveMenu = () => setActiveMenu(!activeMenu);
+  const navigate1 = useNavigate();
+  const navigate2 = useNavigate();
+
+  const handleNavigation1 = () => {
+    navigate1('/Doctor');
+  };
+  const handleNavigation2 = () => {
+    navigate2('/Consultation');
+  };
 
   return (
     
         
         
-      <div className="navbar-bg">
+    <div>
      
       <div className="navbar-upper container mx-auto flex flex-row justify-start gap-32">
       <NavButton
@@ -73,19 +82,25 @@ const Navbar = () => {
     />
         <div className="nav-links flex-1 flex flex-row gap-32 text-center text-16">
           <div className="link">
-            <div className="text">Find Doctors</div>
+            <button className="bg-white text-base">
+            <div className="text-22" onClick={handleNavigation1}>Find Doctors</div>
+            </button>
           </div>
           <div className="link1">
-            <div className="text">Video Consult</div>
+            <button className="bg-white text-base">
+            <div className="text" onClick={handleNavigation2}>Video Consult</div></button>
           </div>
           <div className="link1">
-            <div className="text">Medicines</div>
+          <button className="bg-white text-base">
+            <div className="text">Medicines</div></button>
           </div>
           <div className="link1">
-            <div className="text">Lab Tests</div>
+          <button className="bg-white text-base">
+            <div className="text">Lab Tests</div></button>
           </div>
           <div className="link1">
-            <div className="text">Surgeries</div>
+          <button className="bg-white text-base">
+            <div className="text">Surgeries</div></button>
           </div>
         </div>
         <div className="cta flex items-center justify-start gap-16 text-14">
@@ -98,7 +113,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-      
+  
 
         
         

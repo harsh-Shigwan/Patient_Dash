@@ -67,6 +67,7 @@ function Remind() {
   };
 
   return (
+    <div>
     <div className="bg-white dark:bg-secondary-dark-bg container mx-auto p-4">
       <h1 className=" dark:text-white text-2xl font-semibold mb-4">Reminder</h1>
 
@@ -127,6 +128,7 @@ function Remind() {
       >
         Add Reminder
       </button>
+    </div>
     </div>
   );
 }

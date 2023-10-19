@@ -5,7 +5,8 @@ import "./Prescription.css";
 
 const Prescription = () => {
   return (
-  <div>
+ 
+    <div >
               <div className="background-upper-child" />
               <div className="parent">
                 <div className="div">16/10/23</div>

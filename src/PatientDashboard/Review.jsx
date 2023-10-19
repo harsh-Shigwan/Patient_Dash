@@ -37,6 +37,7 @@ const Review= () => {
   };
 
   return (
+    <div>
     <div className="bg-white dark:bg-secondary-dark-bg container mx-auto p-4">
       <h1 className="text-3xl font-semibold mb-4">Doctor Review</h1>
       <div className="mb-4">
@@ -88,6 +89,7 @@ const Review= () => {
           ))}
         </ul>
       </div>
+    </div>
     </div>
   );
 };

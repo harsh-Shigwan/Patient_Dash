@@ -11,6 +11,7 @@ const Consultation7 = () => {
     navigate('/Consultation8');
   }
   return (
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
     <div className="flex left-[10px] ">
     <div className="relative bg-lightcyan w-full h-[745px] overflow-hidden text-left text-base text-blue-900 font-inter">
       <div className="absolute top-[464px] left-[194px] w-4 h-4 overflow-hidden" />
@@ -86,6 +87,7 @@ const Consultation7 = () => {
         alt=""
         src="/line-19.svg"
       />
+    </div>
     </div>
     </div>
   );

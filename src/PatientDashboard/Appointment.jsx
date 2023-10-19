@@ -91,7 +91,8 @@ const Appointment = () => {
   
     const abbreviatedMonth = getAbbreviatedMonthName(selectedDate.getMonth());
     const abbreviatedDay = getAbbreviatedDayName(selectedDate.getDay());
-   return ReactDOM.createPortal( <div><div className=' fixed left-0 top-0 bottom-0 right-0 bg-teal-100 opacity-75 '><div className='fixed  '>
+   return ReactDOM.createPortal( <div>
+    <div className=' fixed left-0 top-0 bottom-0 right-0 bg-teal-100 opacity-75 '><div className='fixed  '>
        
     </div>      <div className="rounded-3xl bg-white mt-2 left-[370px] w-[596px] h-[608px] overflow-hidden text-left text-lg text-green-500 font-text-sm-font-semibold relative">
     <div className="absolute top-[0px] left-[0px] bg-teal-100 w-[596px] h-[121px] overflow-hidden text-base text-blue-900">
@@ -353,7 +354,7 @@ const Appointment = () => {
   </button>
   <button
     className="cursor-pointer [border:none] py-[5px] px-[7px] bg-primary-700 absolute top-[143px] left-[473px] rounded-8xs w-[185px] h-10 overflow-hidden flex flex-row items-center justify-center box-border"
-    autoFocus={true}
+    autoFocus={true} onClick={()=>setShowModels(true)}
   >
     <div className="relative text-base leading-[150%] font-semibold font-text-lg-font-normal text-white text-left">
       Book Appointment
@@ -388,7 +389,7 @@ const Appointment = () => {
   </button>
   <button
     className="cursor-pointer [border:none] py-[5px] px-[7px] bg-primary-700 absolute top-[143px] left-[473px] rounded-8xs w-[185px] h-10 overflow-hidden flex flex-row items-center justify-center box-border"
-    autoFocus={true}
+    autoFocus={true} onClick={()=>setShowModels(true)}
   >
     <div className="relative text-base leading-[150%] font-semibold font-text-lg-font-normal text-white text-left">
       Book Appointment
@@ -415,7 +416,7 @@ const Appointment = () => {
   </div>
   <button
     className="cursor-pointer py-[5px] px-[7px] bg-primary-50 absolute top-[143px] left-[272px] rounded-8xs box-border w-[185px] h-10 overflow-hidden flex flex-row items-center justify-center border-[1px] border-solid border-blue-800"
-    autoFocus={true}
+    autoFocus={true} 
   >
     <div className="relative text-base leading-[150%] font-semibold font-text-lg-font-normal text-blue-900 text-left">
       Call Clinic
@@ -423,7 +424,7 @@ const Appointment = () => {
   </button>
   <button
     className="cursor-pointer [border:none] py-[5px] px-[7px] bg-primary-700 absolute top-[143px] left-[473px] rounded-8xs w-[185px] h-10 overflow-hidden flex flex-row items-center justify-center box-border"
-    autoFocus={true}
+    autoFocus={true} onClick={()=>setShowModels(true)}
   >
     <div className="relative text-base leading-[150%] font-semibold font-text-lg-font-normal text-white text-left">
       Book Appointment
@@ -540,224 +541,4 @@ const Appointment = () => {
 }
 
 export default Appointment
-
-// import React, { useState } from "react";
-// import Time from "../components/PatientComponents/Time";
-
-// const getAbbreviatedMonthName = (month) => {
-//   const monthNames = [
-//     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-//     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-//   ];
-//   return monthNames[month];
-// };
-
-// const getAbbreviatedDayName = (day) => {
-//   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-//   return dayNames[day];
-// };
-
-// const Appointment = () => {
-  // const [selectedDate, setSelectedDate] = useState(new Date());
-
-  // const handleDateChange = (days) => {
-  //   const newDate = new Date(selectedDate);
-  //   newDate.setDate(selectedDate.getDate() + days);
-  //   setSelectedDate(newDate);
-  // };
-
-  // const abbreviatedMonth = getAbbreviatedMonthName(selectedDate.getMonth());
-  // const abbreviatedDay = getAbbreviatedDayName(selectedDate.getDay());
-//   const [showTime, setShowTime] = useState(false);
-//   // window.scrollTo(0, 0);
-//   function scrollWin() {
-//     window.scrollTo(0, 0);
-//   }
-
-//   return (
-//     <div className=" flex">
-//       <div className="ml-5 mt-10 w-2/5 h-screen">
-//         <div
-//           className=" relative rounded-xl bg-white box-border w-[278px] h-[116px]  text-left text-sm text-blue-900 font-inter border-[1px] border-solid border-teal-300 overflow-hidden"
-//           id="div1"
-//         >
-//           <div className="absolute top-[11px] left-[11px] leading-[150%] font-medium">
-//             16/10/23
-//           </div>
-//           <div className="absolute top-[9px] left-[183px] rounded bg-teal-100 box-border w-[84px] flex flex-row items-center justify-center py-0.5 px-[3px] border-[1px] border-solid border-teal-400">
-//             <div className="relative leading-[150%]">Dr. Ashish</div>
-//           </div>
-//           <div className="absolute top-[40px] left-[0px] bg-teal-50 w-[278px] h-[100px]  flex flex-row items-start justify-start py-[9px] px-2 box-border text-[12px]">
-//             <div className="relative leading-[150%] inline-block w-[233px] shrink-0">
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-//               vulputate libero et velit interdum, ac aliquet odio mattis.
-//             </div>
-//           </div>
-//         </div>
-//         <div
-//           className="  relative  mt-10 rounded-xl bg-white box-border w-[278px] h-[116px]  text-left text-sm text-blue-900 font-inter border-[1px] border-solid border-teal-300 overflow-hidden"
-//           id="div1"
-//         >
-//           <div className="absolute top-[11px] left-[11px] leading-[150%] font-medium">
-//             16/10/23
-//           </div>
-//           <div className="absolute top-[9px] left-[183px] rounded bg-teal-100 box-border w-[84px]  flex flex-row items-center justify-center py-0.5 px-[3px] border-[1px] border-solid border-teal-400">
-//             <div className="relative leading-[150%]">Dr. Ashish</div>
-//           </div>
-//           <div className="absolute top-[40px] left-[0px] bg-teal-50 w-[278px] h-[100px]  flex flex-row items-start justify-start py-[9px] px-2 box-border text-[12px]">
-//             <div className="relative leading-[150%] inline-block w-[233px] shrink-0">
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-//               vulputate libero et velit interdum, ac aliquet odio mattis.
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-
-
-
-
-
-         
-    
-    //      <div className="  w-3/5 rounded-3xl bottom-4 border-8  bg-white h-[608px] text-left text-lg text-green-500 font-text-sm-font-semibold">
-    //   <div className=" relative top-[0px] left-[0px] bottom-4 bg-teal-100 w-[596px] h-[121px]  text-base text-blue-900">
-    //     <img
-    //       className="absolute top-[3px] left-[3px] rounded-xl w-[122px] h-[118px] object-cover"
-    //       alt=""
-    //       src="/image-20@2x.png"
-    //     />
-    //     <div className="absolute top-[8px] left-[128px] text-xl leading-[150%] font-semibold">
-    //       Dr. Raghav Gupta
-    //     </div>
-    //     <div className="absolute top-[40px] left-[128px] leading-[150%] text-gray1">
-    //       M.B.B.S
-    //     </div>
-    //     <div className="absolute top-[66px] left-[128px] leading-[150%] text-gray1">
-    //       18+ years of experience overall
-    //     </div>
-    //     <div className="absolute top-[92px] left-[128px] leading-[150%]">
-    //       Santacruz, Mumbai
-    //     </div>
-    //     <div className="absolute top-[11px] left-[402px] rounded-3xs bg-white flex flex-row items-center justify-center py-1 px-[7px] text-sm text-teal-500 border-[0.5px] border-solid border-teal-500">
-    //       <div className="relative leading-[150%] font-medium">
-    //         Consultation Fees 500/-
-    //       </div>
-    //     </div>
-    //     <div className="absolute top-[94px] left-[303px] text-sm leading-[150%]">
-    //       Millennium Smile Dental Clinic
-    //     </div>
-    //   </div>
-    //   <div className=" relative  left-[0px] bg-gray-200 w-[596px] h-[73px] text-xl text-black"  onChange={setSelectedDate}
-    //   value={selectedDate}
-    //   onClickDay={() => setShowTime(true)}>
-    //     <div className="absolute top-[0px] left-[77px] w-24 h-[73px] text-firebrick" onClick={() => handleDateChange(-1)}>
-    //       <div className="absolute top-[0px] left-[0px] text-31xl leading-[150%] font-medium h-32 inline-block w-[55px]">
-    //       {selectedDate.getDate()}
-    //       </div>
-    //       <div className="absolute top-[11.68px] left-[62px] leading-[150%] inline-block w-8 h-[29.2px]">
-    //       {abbreviatedDay}
-    //       </div>
-    //       <div className="absolute top-[33.09px] left-[62px] leading-[150%] inline-block w-[34px] h-[29.2px]">
-    //       {abbreviatedMonth}
-    //       </div>
-    //     </div>
-    //     <button  onClick={() => handleDateChange(1)}> arrow</button>
-    //     <div className="absolute top-[0px] left-[250px] w-[99px] h-[73px]" >
-    //       <div className="absolute top-[0px] left-[0px] text-31xl leading-[150%] font-medium inline-block w-14 h-[73px]" onChange={setSelectedDate}
-    //       value={selectedDate}
-    //       onClickDay={() => setShowTime(true)}>
-    //       {selectedDate.getDate() + 1} 
-    //       </div>
-    //       <div className="absolute top-[11.68px] left-[62px] leading-[150%] inline-block w-[37px] h-[29.2px]">
-    //       {getAbbreviatedDayName((selectedDate.getDay() + 1) % 7)}
-    //       </div>
-    //       <div className="absolute top-[33.09px] left-[62px] leading-[150%] inline-block w-[34px] h-[29.2px]">
-    //       {getAbbreviatedMonthName(selectedDate.getMonth())}
-    //       </div>
-    //     </div>
-    //     <div className="absolute top-[0px] left-[426px] w-[104px] h-[73px]" onClick={() => handleDateChange(2)}>
-    //       <div className="absolute top-[0px] left-[0px] text-31xl leading-[150%] font-medium inline-block w-[57px] h-[73px]">
-    //       {selectedDate.getDate() + 2}
-    //       </div>
-    //       <div className="absolute top-[11.68px] left-[62px] leading-[150%] inline-block w-[42px] h-[29.2px]">
-    //       {getAbbreviatedDayName((selectedDate.getDay() + 2) % 7)}
-    //       </div>
-    //       <div className="absolute top-[33.09px] left-[62px] leading-[150%] inline-block w-[34px] h-[29.2px]">
-    //       {getAbbreviatedMonthName(selectedDate.getMonth())}
-    //       </div>
-    //     </div>
-    //     <img
-    //       className="absolute top-[27px] left-[558px] rounded-[3px] w-5 h-5 "
-    //       alt=""
-    //       src="/chevrondown.svg"
-    //     />
-    //     <img
-    //       className="absolute top-[72px] left-[37.5px] w-[164.01px] h-px"
-    //       alt=""
-    //       src="/line-12.svg"
-    //     />
-    //   </div>
-    //   <div className=" relative   h-3/4  ">
-    //   <div className="absolute top-[70px] left-[29px] rounded-3xs bg-white box-border w-[158px] h-[73px] border-[2px] border-solid border-green-400">
-    //     <div className="absolute top-[23px] left-[38px] leading-[150%] font-medium">
-    //       10:30 AM
-    //     </div>
-    //   </div>
-    //   <div className="absolute top-[230px] left-[30px] rounded-3xs bg-white box-border w-[158px] h-[73px]  border-[2px] border-solid border-green-400">
-    //     <div className="absolute top-[23px] left-[38px] leading-[150%] font-medium">
-    //       12:30 PM
-    //     </div>
-    //   </div>
-    //   <div className="absolute top-[372px] left-[30px] rounded-3xs bg-white box-border w-[158px] h-[73px]  border-[2px] border-solid border-green-400">
-    //     <div className="absolute top-[23px] left-[38px] leading-[150%] font-medium">
-    //       8:30 PM
-    //     </div>
-    //   </div>
-    //   <div className="absolute top-[372px] left-[219px] rounded-3xs bg-white box-border w-[158px] h-[73px]  border-[2px] border-solid border-green-400">
-    //     <div className="absolute top-[23px] left-[38px] leading-[150%] font-medium">
-    //       7:30 PM
-    //     </div>
-    //   </div>
-    //   <div className="absolute mt-16 left-[408px] rounded-3xs bg-white box-border w-[158px] h-[73px] border-[2px] border-solid border-green-400">
-    //     <div className="absolute top-[23px] left-[38px] leading-[150%] font-medium">
-    //       9:30 AM
-    //     </div>
-    //   </div>
-    //   <div className="absolute top-[25px] left-[30px] text-xl leading-[150%] font-medium text-green-900">
-    //     Morning Slots
-    //   </div>
-    //   <div className="absolute top-[175px] left-[30px] text-xl leading-[150%] font-medium text-green-900">
-    //     Afternoon Slots
-    //   </div>
-    //   <div className="absolute top-[328px] left-[30px] text-xl leading-[150%] font-medium text-green-900">
-    //     Evening Slots
-    //   </div>
-    //   <div className="absolute top-[70px] left-[218px] rounded-3xs bg-white box-border w-[158px] h-[73px] border-[2px] border-solid border-green-400">
-    //     <div className="absolute top-[23px] left-[38px] leading-[150%] font-medium">
-    //       11:00 AM
-    //     </div>
-    //   </div>
-    //   <div className="absolute top-[230px] left-[219px] rounded-3xs bg-white box-border w-[158px] h-[73px]  border-[2px] border-solid border-green-400">
-    //     <div className="absolute top-[23px] left-[38px] leading-[150%] font-medium">
-    //       4:00 PM
-    //     </div>
-    //   </div></div>
-      
-    //   <button className=" h-10 w-full top-[740px] bg-stone-500  ">Confirm</button>
-    //   <Time showTime={showTime} date={selectedDate} />
-    // </div> 
-   
-
-
-
-
-
-//     </div>
-//   );
-// };
-
-// export default Appointment;
-
-
 

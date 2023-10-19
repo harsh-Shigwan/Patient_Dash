@@ -8,7 +8,8 @@ const Doc1 = () => {
    
       navigate('/Appointment');
     }
-    return ( <div><div className=' fixed left-0 top-0 bottom-0 right-0 bg-teal-100 '><div className='  '>
+    return (  
+      <div className=' fixed left-0 top-0 bottom-0 right-0 bg-teal-100 '><div className='  '>
        
     </div>  <div className=" relative rounded-[17px] mt-11  top-[100px] left-[360px]  bg-white w-[647px] h-[293px] overflow-hidden text-left text-[22px] text-blue-900 font-text-sm-font-semibold">
     <div className="absolute top-[50px] left-[59px] leading-[150%] font-medium inline-block w-[529px]">
@@ -23,7 +24,7 @@ const Doc1 = () => {
         Close
       </div>
     </button>
-  </div></div></div>  
+  </div></div>
     ) 
   }
     return (
@@ -232,8 +233,8 @@ const Doc1 = () => {
         </div>
       </button>{showModel && <Model/>}
     </section>
-
 </div>
+
     );
   };
   

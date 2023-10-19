@@ -50,7 +50,11 @@ const Consultation5 = () => {
           </div>
           <div className="absolute top-[50px] left-[14px] leading-[150%] font-medium">
             CARD HOLDER’S NAME
-          </div>
+          </div>  <input
+        className="absolute  top-[130.89px] left-[45.33px] bg-white box-border w-[100px] h-[58px] overflow-hidden [transform:_rotate(-0.13deg)] [transform-origin:0_0] border-[1px] border-solid border-gray-400"
+        placeholder="Name"
+        type="text"
+      />
           <div className="absolute top-[96px] left-[14px] leading-[150%] font-medium">
             VALID UPTO
           </div>

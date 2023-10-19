@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { useNavigate } from "react-router-dom";
 import consul from "../data/PatientData/consul.jpg";
-import Consultation2 from "./Patient_Dashboard";
+import Consultation3 from "./Patient_Dashboard";
 
 const Consultation = () => {
   const navigate = useNavigate();
   const navigateToContacts = () => {
  
-    navigate('/Consultation2');
+    navigate('/Consultation3');
   }
   return (
     <div className="flex left-[10px] ">
@@ -43,6 +43,7 @@ const Consultation = () => {
       />
     </div>
     </div>
+
   );
 };
 

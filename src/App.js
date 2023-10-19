@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components/PatientComponents';
-import { TimesSlot , Doc1, Consultation7, Consultation6, Consultation5, Consultation4, Consultation3, Consultation2, Consultation , Calendar, Doctor, Customers, Kanban, Editor , Appointment , Records ,Prescription , Patient_Dashboard , QnA ,QandA, About , Remind , Reminder, Review , RecordsPage2 } from './PatientDashboard';
+import { TimesSlot , Doc1, Consultation7, Consultation6, Consultation5, Consultation4, Consultation3, Consultation , Calendar, Doctor, Customers, Kanban, Editor , Appointment , Records ,Prescription , Patient_Dashboard , QnA ,QandA, About , Remind , Reminder, Review , RecordsPage2 } from './PatientDashboard';
 import './App.css';
 import './PatientDashboard/Calender.css'
 //import Profile from './components/PatientComponents/Pro';
@@ -78,7 +78,7 @@ const App = () => {
                 <Route path="/customers" element={<Customers />} />
                 <Route path="/Appointment" element={<Appointment/>}/>
                 <Route path="/Consultation" element={<Consultation/>}/>
-                <Route path="/Consultation2" element={<Consultation2/>}/>
+               
                 <Route path="/Consultation3" element={<Consultation3/>}/>
                 <Route path="/Consultation4" element={<Consultation4/>}/>
                 <Route path="/Consultation5" element={<Consultation5/>}/>

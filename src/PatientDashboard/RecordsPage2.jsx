@@ -74,6 +74,7 @@ const RecordsPage2 = () => {
   };
 
   return (
+    <div>
     <div className="bg-teal-50 dark:bg-secondary-dark-bg container mx-auto p-4 animate-form-in">
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="mb-4 ">
@@ -218,6 +219,7 @@ const RecordsPage2 = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };

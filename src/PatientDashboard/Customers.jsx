@@ -10,6 +10,7 @@ const Customers = () => {
   const editing = { allowDeleting: true, allowEditing: true };
 
   return (
+  
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="Page" title="Customers" />
       <GridComponent
@@ -29,6 +30,7 @@ const Customers = () => {
         <Inject services={[Page, Selection, Toolbar, Edit, Sort, Filter]} />
       </GridComponent>
     </div>
+
   );
 };
 

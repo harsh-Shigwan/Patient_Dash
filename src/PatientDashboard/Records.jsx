@@ -62,7 +62,7 @@ const Records = () => {
                 id="hcard"
               >
                 <div className="absolute top-[0px] left-[1100px] rounded-[36px] bg-teal-400 box-border w-[123px] h-[39px] overflow-hidden border-[1px] border-solid border-teal-500" onClick={navigateToContacts} />
-                <div className="absolute top-[8px] left-[1130px]   text-base leading-[150%] font-medium font-text-sm-font-semibold text-white text-left inline-block w-[101px]">
+                <div className="absolute top-[8px] left-[1130px] transparent-text  text-base leading-[150%] font-medium font-text-sm-font-semibold text-white text-left inline-block w-[101px]">
                 Upload
                 </div>
               </button>
