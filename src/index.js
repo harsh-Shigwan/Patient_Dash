@@ -18,9 +18,9 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-
-
 /*
+
+
     // code for DOCTOR DASHBOARD
 import App2 from './App2';
 import { ContextProvider } from './contexts/DoctorContext/DocContextProvider';

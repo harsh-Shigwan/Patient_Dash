@@ -145,22 +145,22 @@ const Patient_Dashboard = () => {
   }
   return (
 
-    <div className="text-center md:text-left lg:text-right">
-      <section className="  h-full bg-teal-50 sticky ">
+    <div className=" w-full text-center md:text-left lg:text-right">
+      <section className=" w-full h-full bg-teal-50 sticky ">
         <div
-          className=" mt-5 mx-10 rounded-xl bg-teal-200 h-[229px]  text-left text-5xl text-black font-text-sm-font-semibold"
+          className="mx-3 mt-20 md:mt-5 md:mx-10 rounded-xl bg-teal-100 h-[229px]  text-left text-5xl text-black font-text-sm-font-semibold"
           id="search"
         >
-          <div className="  flex flex-col items-start justify-start gap-[1px]">
-            <div className="mt-5  ml-10 leading-[150%] font-semibold inline-block w-[170px] h-[37px] shrink-0">
+          <div className=" flex-wrap md:flex flex-col items-start justify-start gap-[1px]">
+            <div className="  mt-5  ml-10 leading-[150%] font-semibold inline-block w-[170px] h-[37px] shrink-0">
               Search Doctor
             </div>
-            <div className=" ml-10 mt-2 text-sm leading-[150%] inline-block w-[374px] h-[37px] shrink-0">
+            <div className="  ml-10 mt-2 text-sm leading-[150%] inline-block md:w-[374px] h-[37px] shrink-0">
               Sorem ipsum dolor sit amet, consectetur adipiscing elit.
             </div>
           </div>
           <div className=" flex space-x-5 mt-8">
-            <div className="   w-96 ml-10 font-text-sm-font-semibold text-lg bg-white  rounded-sm box-border h-[50px]  border-[1px] border-solid border-teal-400 ">
+            <div className=" ml-3 w-28  md:w-96 md:ml-10 font-text-sm-font-semibold text-lg bg-white  rounded-sm box-border h-[50px]  border-[1px] border-solid border-teal-400 ">
               <DropDown currentMode={currentMode} />
             </div>{" "}
             <div className="   w-2/4    font-text-sm-font-semibold text-lg bg-white   rounded-sm box-border  h-[50px]  border-[1px] border-solid border-teal-400    ">
@@ -169,35 +169,31 @@ const Patient_Dashboard = () => {
           </div>
           <div class="relative top-0px bottom-[55px] bg-teal-300">
 
-          <img
-           className="absolute bottom-[0px] left-[869px] w-[116px] h-[100px] bg-teal-200 object-cover opacity-[0.85]"
-            alt="hii"
-            src={medical}
-          />
+          
     </div>
   
         </div>
       </section>
-      <section className=" flex">
+      <section className=" flex-wrap md:flex">
         {/*overflow-scroll flex no-scrollbar*/}
         {home1.map((x, index) => {
           return (
             <div
-              className=" rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)]  flex flex-row items-center mt-10 mx-10 w-2/5 border-[1px] border-solid border-green-50 flex-shrink-0 n"
+              className=" mx-3 w-11/12 rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)]  flex flex-row items-center mt-10 md:mx-10 md:w-2/5 border-[1px] border-solid border-green-50 flex-shrink-0 n"
               id="card"
             >
-              <div className="flex flex-row items-center justify-start gap-[13px]">
+              <div className="  flex flex-row items-center justify-start gap-[13px]">
                 <img
-                  className="relative w-[230px] h-[228px] object-cover"
+                  className="relative w-2/4 md:w-[230px] h-[228px]  bg-cover"
                   alt="by"
                   src={doctor}
                  
                 />
-                <div className="flex flex-col items-start justify-start gap-[34px]">
-                  <div className="relative leading-[150%] font-medium inline-block w-[217px]">
+                <div className="  flex  flex-col items-start justify-start gap-[34px]">
+                  <div className="relative font-medium inline-block  w-28 md:w-[150px] ">
                     {x.header}
                   </div>
-                  <div className="relative text-base leading-[150%] font-light inline-block w-[217px] h-[57px] shrink-0">
+                  <div className=" relative text-base leading-[150%] font-light inline-block w-28 md:w-[157px] h-[57px] shrink-0">
                     {x.dec}
                   </div>
                 </div>
@@ -207,25 +203,25 @@ const Patient_Dashboard = () => {
         })}
       </section>
       <section
-          className=" mx-10 flex flex-col mt-36 items-start justify-start gap-[70px] text-left      text-17xl text-teal-500 font-text-sm-font-semibold "
+          className=" mx-5 flex flex-col mt-36 items-start justify-start gap-[70px] text-left      text-17xl text-teal-500 font-text-sm-font-semibold "
             id="page2"
           >
-          <div className="flex flex-col items-start justify-start" id="name">
+          <div className="  w-full md:flex flex-col items-start justify-start" id="name">
           <b className="relative leading-[150%]">
             Consult top doctors online for any health concern
           </b>
-          <div className="relative text-5xl leading-[150%] text-teal-800 inline-block w-[728px] h-[68px] shrink-0">
+          <div className="w-full md:relative mt-5 md:mt-0  text-xl md:text-5xl leading-[150%] text-teal-800 inline-block md:w-[728px] h-[68px] shrink-0">
             Private online consultations with verified doctors in all
             specialists
           </div>
         </div>
 
         <div
-          className="flex gap-5 items-start justify-around  text-left text-base text-black font-text-sm-font-semibold   w-full"
+          className=" flex-wrap md:flex gap-5 items-start justify-around  text-left text-base text-black font-text-sm-font-semibold   w-full"
           id="horicard"
          >
-          <div className="  relative w-[235.79px] h-[331.97px] " id="Hcard1">
-            <div className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
+          <div className=" mx-7 md:mx-0  mt-0 md:mt-0  relative w-[235.79px] h-[331.97px] " id="Hcard1">
+            <div className=" absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
               <button
                 className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[257px] left-[56px] w-[123px] h-[39px]"
                 autoFocus={true}
@@ -247,8 +243,8 @@ const Patient_Dashboard = () => {
              
             />
           </div>
-            <div className="  relative w-[235.79px] h-[331.97px] " id="Hcard1">
-            <div className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
+            <div className=" mx-7 md:mx-0  mt-5 md:mt-0  relative w-[235.79px] h-[331.97px] " id="Hcard1">
+            <div className=" absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
               <button
                 className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[257px] left-[56px] w-[123px] h-[39px]"
                 autoFocus={true}
@@ -272,8 +268,8 @@ const Patient_Dashboard = () => {
           </div>
 
           
-           <div className="  relative w-[235.79px] h-[331.97px] " id="Hcard1">
-            <div className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
+           <div className=" mx-7 md:mx-0  mt-5 md:mt-0 relative w-[235.79px] h-[331.97px] " id="Hcard1">
+            <div className=" absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
               <button
                 className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[257px] left-[56px] w-[123px] h-[39px]"
                 autoFocus={true}
@@ -297,7 +293,7 @@ const Patient_Dashboard = () => {
           </div>
           
           
-           <div className="  relative w-[235.79px] h-[331.97px] " id="Hcard1">
+           <div className="mx-7 md:mx-0  mt-5 md:mt-0  relative w-[235.79px] h-[331.97px] " id="Hcard1">
             <div className="absolute top-[0px] left-[0px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)] box-border w-[235.79px] h-[331.97px] overflow-hidden border-[1px] border-solid border-green-50">
               <button
                 className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[257px] left-[56px] w-[123px] h-[39px]"
@@ -325,19 +321,19 @@ const Patient_Dashboard = () => {
         </div>
       </section>
       <div className="relative bg-white w-full h-[503px] overflow-hidden">
-      <div className="absolute top-[112px] left-[58px] w-[1325px] h-[304.73px]">
+      <div className="   absolute top-[112px] left-[58px] w-[1325px] h-[304.73px]">
         <section
-          className="absolute top-[0px] left-[0px] w-[120px] h-[236.22px] text-left text-[64px] text-cadetblue font-sofia-sans"
+          className="absolute top-[0px] left-[0px]  w-[220px] h-[236.22px] text-left text-[64px] text-cadetblue font-sofia-sans"
           id="nameqote"
         >
-          <div className="absolute top-[0px] left-[0px] font-extrabold">
+          <div className=" ml-16 md:ml-0 absolute top-[0px] left-[0px] font-extrabold">
             <p className="m-0">Take Care Of</p>
             <p className="m-0">Your Life</p>
             <p className="m-0"></p>
           </div>
         </section>
         <main
-          className="absolute top-[0px] left-[250px] h-[304.73px] flex flex-row items-start justify-start gap-[62px]"
+          className=" ml-40 md:ml-0 absolute left-[250px] h-[304.73px] flex flex-row items-start justify-start gap-[62px]"
           id="feature"
         >
           <section
@@ -431,26 +427,26 @@ const Patient_Dashboard = () => {
         id="page4"
       >
         <section
-          className="w-[947px] flex flex-col items-start justify-start text-left text-17xl text-teal-500 font-text-sm-font-semibold"
-          id="bookappoint"
+          className=" flex-wrap md:w-[947px] flex flex-col items-start justify-start text-left text-17xl text-teal-500 font-text-sm-font-semibold"
+          id="bookappoint "
         >
-          <div className="self-stretch relative h-[117px]">
-            <b className="  inline-block w-[947px]">
+          <div className=" self-stretch relative h-[117px]">
+            <b className="  w-full md:inline-block md:w-[947px]">
               Book an appointment with a doctor
             </b>
-            <div className="  text-5xl text-teal-800 inline-block w-[947px]">
+            <div className=" mt-5 md:mt-0  w-full text-xl md:text-5xl text-teal-800 inline-block ">
               Book appointments and received experienced doctor insight from
               various medical fields.
             </div>
           </div>
-        </section>
-        <div className="flex justify-around">
+        </section>{/*
+        <div className="  mt-72  md:mt-5 flex-wrap md:flex justify-around gap-[75px]">
         <div
           className="flex flex-row items-center justify-start gap-[31px] text-left text-base text-teal-800 font-text-sm-font-semibold"
           id="dccard"
         >
           <div
-            className="relative w-[406px] h-[234px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)]  "
+            className="relative   md:w-[406px] h-[234px] rounded-mini bg-white shadow-[0px_1.7999999523162842px_4px_rgba(0,_0,_0,_0.25)]  "
             id="Dcard1"
           >
             <div className=" top-[0px] left-[0px] rounded-9xl w-[406px] h-[234px] overflow-hidden  bg-cover bg-no-repeat bg-[top]">
@@ -463,7 +459,7 @@ const Patient_Dashboard = () => {
                     Book Now
                   </div>
                   <img
-                    className="relative w-6 h-6 overflow-hidden shrink-0"
+                    className="relative  w-3 md:w-6 h-6 "
                     alt=""
                     src={dentist}
                   />
@@ -521,7 +517,7 @@ const Patient_Dashboard = () => {
           </div>
         </div>
          
-        </div>
+        </div> */}
       </main>
 
 
@@ -537,26 +533,26 @@ const Patient_Dashboard = () => {
           src={Vector5}
         />
         <div className="absolute top-[48px] left-[241.05px] w-[585.9px] h-[410px] text-center text-5xl text-cadetblue font-sofia-sans">
-          <div className="absolute top-[74px] left-[-0.05px] w-[585.9px] flex flex-col items-start justify-start">
-            <div className="self-stretch relative font-semibold">
-              Ankit Choudhary
-            </div>
-          </div>
-          <div className="absolute top-[141px] left-[-.05px] font-light text-darkslategray inline-block w-[585.9px]">
-            Very easy to book, maintain history. Hassle free from older versions
-            of booking appointment via telephone. Thanks Practo for making it
-            simple.
+        <div className="absolute top-[74px] left-[-0.05px] w-[585.9px] flex flex-col items-start justify-start">
+          <div className="self-stretch relative font-semibold">
+            Ankit Choudhary
           </div>
         </div>
-        <img
-          className="absolute top-[203px] left-[900px] w-[37.05px] h-[60px]"
-          alt=""
-          src={Vector6}
-        />
+        <div className="absolute top-[141px] left-[-.05px] font-light text-darkslategray inline-block w-[585.9px]">
+          Very easy to book, maintain history. Hassle free from older versions
+          of booking appointment via telephone. Thanks Practo for making it
+          simple.
+        </div>
       </div>
+      <img
+        className="absolute top-[203px] left-[900px] w-[37.05px] h-[60px]"
+        alt=""
+        src={Vector6}
+      />
     </div>
-      </div>
-      <div>
+  </div>
+    </div>
+    <div>
          <div className="relative bg-white w-full h-[483px] overflow-hidden">
       <div className="absolute top-[28px] left-[-2px] w-[1591.2px] h-[455px]">
         <section
@@ -686,59 +682,59 @@ const Patient_Dashboard = () => {
 
      
      <div className="relative bg-teal-100 w-full h-[380px] overflow-hidden text-left text-5xl text-gray-900 font-text-2xl-font-semibold">
-      <div className="absolute top-[272px] left-[400px] flex flex-row items-center justify-start gap-[12px]">
-        <img className="relative w-8 h-8" alt="" src={logo}/>
-        <div className="relative leading-[150%] font-semibold">CareChainAI</div>
-      </div>
-      <div className="absolute top-[67px] left-[200px] w-[771px] h-[170px] text-base text-blue-900">
-        <div className="absolute top-[0px] left-[0px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[98px] left-[0px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[0px] left-[262px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[0px] left-[524px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[98px] left-[524px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[98px] left-[277px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[0px] left-[131px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[98px] left-[131px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[0px] left-[393px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[0px] left-[655px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[98px] left-[655px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-        <div className="absolute top-[98px] left-[393px] leading-[150%] font-semibold inline-block w-[116px]">
-          Gorem ipsum dolor sit amet consectetur
-        </div>
-      </div>
-      <img
-        className="absolute top-[108px] left-[0px] w-[173.81px] h-[272px] object-cover opacity-[0.85]"
-        alt=""
-        src={jec}
-      />
-      <img
-        className="absolute top-[108px] left-[1049px] w-[191px] h-[274.43px] object-cover opacity-[0.85]"
-        alt=""
-        src={inj}
-      />
-    </div>
+     <div className="absolute top-[272px] left-[400px] flex flex-row items-center justify-start gap-[12px]">
+       <img className="relative w-8 h-8" alt="" src={logo}/>
+       <div className="relative leading-[150%] font-semibold">CareChainAI</div>
+     </div>
+     <div className="absolute top-[67px] left-[200px] w-[771px] h-[170px] text-base text-blue-900">
+       <div className="absolute top-[0px] left-[0px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[98px] left-[0px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[0px] left-[262px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[0px] left-[524px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[98px] left-[524px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[98px] left-[277px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[0px] left-[131px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[98px] left-[131px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[0px] left-[393px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[0px] left-[655px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[98px] left-[655px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+       <div className="absolute top-[98px] left-[393px] leading-[150%] font-semibold inline-block w-[116px]">
+         Gorem ipsum dolor sit amet consectetur
+       </div>
+     </div>
+     <img
+       className="absolute top-[108px] left-[0px] w-[173.81px] h-[272px] object-cover opacity-[0.85]"
+       alt=""
+       src={jec}
+     />
+     <img
+       className="absolute top-[108px] left-[1049px] w-[191px] h-[274.43px] object-cover opacity-[0.85]"
+       alt=""
+       src={inj}
+     />
+   </div>
     </div>
 
   );
@@ -746,4 +742,3 @@ const Patient_Dashboard = () => {
 
 
 export default Patient_Dashboard;
-

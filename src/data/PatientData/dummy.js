@@ -36,6 +36,38 @@ export const gridOrderImage = (props) => (
     />
   </div>
 );
+export const questions = [
+  {
+      "id": 1,
+      "question": "What is the recommended daily intake of water for adults?",
+      "short_answer": "The recommended daily intake of water for adults is about 8 cups, or 2 liters."
+  },
+  {
+      "id": 2,
+      "question": "What is the primary function of the cardiovascular system?",
+      "short_answer": "The primary function of the cardiovascular system is to circulate blood throughout the body, delivering oxygen and nutrients to cells and removing waste products."
+  },
+  {
+      "id": 3,
+      "question": "What is the average resting heart rate for adults?",
+      "short_answer": "The average resting heart rate for adults is between 60 and 100 beats per minute."
+  },
+  {
+      "id": 4,
+      "question": "What are the benefits of regular exercise?",
+      "short_answer": "Regular exercise has numerous benefits, including improved cardiovascular health, weight management, reduced risk of chronic diseases, and enhanced mood and mental well-being."
+  },
+  {
+      "id": 5,
+      "question": "What is the recommended daily intake of fruits and vegetables?",
+      "short_answer": "The recommended daily intake of fruits and vegetables varies, but a general guideline is to consume at least 5 servings a day for optimal health."
+  },
+  {
+      "id": 6,
+      "question": "What is the importance of getting enough sleep for overall health?",
+      "short_answer": "Getting enough sleep is crucial for overall health as it helps with cognitive function, emotional well-being, immune system support, and physical recovery."
+  }
+]
 
 export const gridOrderStatus = (props) => (
   <button

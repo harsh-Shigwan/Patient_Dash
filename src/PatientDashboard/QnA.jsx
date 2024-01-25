@@ -1,52 +1,76 @@
-import React from 'react';
-import { useNavigate,Route,Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './QnA.css';
+import { questions } from '../data/PatientData/dummy';
 const QnA = () => {
   const navigate = useNavigate();
+
   const navigateToContacts = () => {
- 
     navigate('/QandA');
   }
+
+  const [data, setData] = useState(questions);
+
+  // Function to toggle the answer visibility
+  const toggleAnswer = (id) => {
+    setData((prevData) => {
+      return prevData.map((item) => {
+        if (item.id === id) {
+          return { ...item, isOpen: !item.isOpen };
+        } else {
+          return { ...item, isOpen: false };
+        }
+      });
+    });
+  };
+
   return (
     <div>
-     
-             
-             <button type="button" class="rounded-none  hover:rounded-lg bg-blue-400 hover:bg-blue-600 Class text-3xl "  onClick={navigateToContacts}> Ask Your Questions</button>
-             
+      <button
+        type="button"
+        className="rounded-none hover:rounded-lg bg-blue-400 hover:bg-blue-600 text-3xl"
+        onClick={navigateToContacts}
+      >
+        Ask Your Questions
+      </button>
 
-  <div>
-        <div className="testimonial" />
-        <div className="rectangle-parent">
-          <div className="rectangle-div" />
-          <div className="ut-enim-ad-minim-veniam-quis-n-parent">
-            <div className="ut-enim-ad">
-              Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat aute irure dolor
+      <section className="absolute h-[63.41%] w-[65.83%] top-[21.07%] right-[32.08%] bottom-[15.52%] left-[82.08%] text-left text-3xl text-neutral-800 font-headings-typography-size-4">
+        {data.map((item) => (
+          <div key={item.id} className="mb-4">
+            <div
+              className="question-box cursor-pointer"
+              onClick={() => toggleAnswer(item.id)}
+            >
+              <div className="h-[25.93%] w-[88.49%] text-lg text-neutral-600 border-2">
+                {item.question}
+              </div>
+              <div className="h-[30.53%] w-[8.28%] rounded-lg bg-blue-700" />
+              <img
+                className="h-[1.96%] w-[10.72%] max-w-full overflow-hidden max-h-full"
+                alt=""
+                src="/group-36810.svg"
+              />
             </div>
-            <div className="what-is-the">What is the consultation fees</div>
-            <div className="group-child1" />
-            <img className="group-icon" alt="" src="/group-36810.svg" />
+            {item.isOpen && (
+              <div className="h-[23.26%]">
+                <div className="h-full w-full rounded-2xl bg-neutral-100 shadow-[0px_5px_16px_rgba(8,_15,_52,_0.06)]" />
+                <div className="h-[34.03%] w-[88.52%]">
+                  <div className="h-[67.38%] w-[80.44%] leading-[28px] font-medium">
+                    {item.short_answer}
+                  </div>
+                  <img
+                    className="h-full w-[8.28%] max-w-full overflow-hidden max-h-full"
+                    alt=""
+                    src="/group-36813.svg"
+                  />
+                </div>
+              </div>
+            )}
           </div>
-          <div className="rectangle-group">
-            <div className="group-child2" />
-            <div className="what-is-the-consultation-fees-parent">
-              <div className="what-is-the1">What is the consultation fees</div>
-              <img className="group-child3" alt="" src="/group-36813.svg" />
-            </div>
-          </div>
-          <div className="rectangle-container">
-            <div className="group-child2" />
-            <div className="what-is-the-consultation-fees-parent">
-              <div className="what-is-the1">What is the consultation fees</div>
-              <img className="group-child3" alt="" src="/group-368131.svg" />
-            </div>
-         </div>
-         </div>
-         </div>
-
-    
-
+        ))}
+      </section>
     </div>
-  )
-}
+  );
+};
+
 export default QnA;
